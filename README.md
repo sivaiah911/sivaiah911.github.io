@@ -1,5 +1,4 @@
-# siva.github.io
-Curriculum Vitae
+# Curriculum Vitae
 Name			:	Sivaiah Bellamkonda
 Qualifications	:	B. Tech., M. Tech., Ph.D.
 Specialization	:	Machine Vision -
@@ -37,8 +36,7 @@ Research Fellow	National Institute of Technology, Tiruchirappalli, Tamil Nadu, I
 July 2020
 4 Yrs.
 Assistant Professor
-
-	Vignan’s Foundation for Science, Technology & Research University, Guntur, Andhra Pradesh, India. (NIRF: 88)  
+Vignan’s Foundation for Science, Technology & Research University, Guntur, Andhra Pradesh, India. (NIRF: 88)  
 Roles: Teaching, Evaluation, Alumni Relations, University Software Development & Maintenance.	Oct. 2010 – July 2016
  5 Yrs. 10 Mon.
 Assistant Professor	Vignan’s Engineering College, Vadlamudi, Andhra Pradesh, India.  
