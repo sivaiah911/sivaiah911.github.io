@@ -4,7 +4,7 @@
 ### Specialization	:	Machine Vision -(Computer Science)
 
 ## Education
-| Degree	                                  | University	                                                                 | Period    |
+| Degree | University | Period |
 |:-----------------------------------------|:----------------------------------------------------------------------------|:----------|
 | Doctor of Philosophy<br>Ph.D.	           | National Institute of Technology, Tiruchirappalli, Tamil Nadu, India        | 2016–2020 |
 | Master of Technology<br>M. Tech. (CSE)	  | Jawaharlal Nehru Technological University, Kakinada, Andhra Pradesh, India  | 2008-2010 |
