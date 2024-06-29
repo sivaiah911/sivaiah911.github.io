@@ -8,10 +8,33 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-	<style type='text/css'>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <style>
+        p.signature {
+            font-family: 'Allura', cursive; /* Specify the signature-style font */
+            font-size: 18px; /* Adjust font size as needed */
+            line-height: 1.6; /* Adjust line height for readability */
+        }
 		h2	{color: rgb(0,0, 200); font-style: italic;}
-	</style>
-	
+        
+        @media print {
+            .nav-tabs, .nav-item {
+                display: none !important; /* Hide tab navigation */
+            }
+            .tab-content {
+                padding: 0; /* Remove padding for printing */
+            }
+            .tab-pane {
+                display: block !important; 
+				visibility: visible; /* Ensure all tab panes are visible */
+				height: auto; /* Ensure auto height for printed content */
+            }
+			.table-header {
+                display: table-header-group; /* Ensures header is repeated */
+            }
+			#visitor {display: none;} 
+        }
+    </style>
 </head>
 <body  style='margin-top: -50px;'> 
     <div class="container mt-5"> 
@@ -64,13 +87,15 @@
             <!-- Tab content -->
             <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 				<h2>Education</h2>
-				<table class="table table-bordered table-striped table-hover"><tr><th>Degree<th>University<th>Period</tr>
+				<table class="table table-bordered table-striped table-hover">
+				<thead class="table-header"><tr><th>Degree<th>University<th>Period</tr></thead>
+				
 				<tr><th>Doctor of Philosophy<br>Ph.D.<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India        <td> 2016-2020 </tr>
 				<tr><th>Master of Technology<br>M. Tech. (CSE) <td>Jawaharlal Nehru Technological University, Kakinada, Andhra Pradesh, India  <td> 2008-2010 </tr>
 				<tr><th> Bachelor of Technology<br>B. Tech. (CSE) <td> Jawaharlal Nehru Technological University, Hyderabad, Andhra Pradesh, India    <td> 2003-2007 </tr></table>
 				<h2>Experience</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Role<td>Institute<td>Period<td> </tr>
+				<thead class="table-header"><tr><th>Role<th>Institute<th>Period<th> </tr></thead>
 				<tr><th>Assistant Professor<td>Indian Institute of Information Technology, Kottayam, Kerala (An Institute of National Importance)<td>July 2021 - till date<td>3 Yrs </tr>
 				<tr><th>Assistant Professor<td>Gandhi Institute of Technology and Management (GITAM Deemed to be) University, Hyderabad. (NIRF: 71) <td>Aug. 2020 - July 2021<td>1 Yr </tr>
 				<tr><th>Research Fellow<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.<td>Aug 2016 - July 2020<td>4 Yrs. </tr>
@@ -144,7 +169,7 @@
             <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
 				<h2>Organizer/Coordinator - Workshop/Conference</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organizing Institute, Place <th>Period <th> </tr>
+				<thead class="table-header"><tr><th>Title<th>Organizing Institute, Place <th>Period <th> </tr></thead>
 				
 				<tr><td>One-week FDP cum Workshop on Advanced Computer Vision for Image & Video Analysis and Applications<td>Indiain Institute of Information Technology Kottayam<td>June 17 - 21, 2024<td>5 Days </tr>
 				
@@ -157,7 +182,7 @@
             <div class="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
 				<h2>Guest Editor/ Reviewer - Journals/Conferences</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Journal/ Conference Details</tr>
+				<thead class="table-header"><tr><th>Title<th>Journal/ Conference Details</tr></thead>
 
 				<tr><td>Reviewer - Journal<td>Signal Image and Video Processing, Springer</tr>
 				<tr><td>Reviewer - Journal<td>Cognitive Neurodynamics, Springer</tr>
@@ -176,7 +201,7 @@
             <div class="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
 				<h2>Resource Person - Workshops/FDP</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organizing Institute, Place<th>Period <th> </tr>
+				<thead class="table-header"><tr><th>Title<th>Organizing Institute, Place<th>Period <th> </tr></thead>
 				
 				<tr><td>One-week FDP cum Workshop on Advanced Computer Vision for Image & Video Analysis and Applications<td>Indiain Institute of Information Technology Kottayam<td>June 17 - 21, 2024<td>5 Days</tr>
 				<tr><td>5 Day FDP cum WORKSHOP on Image Processing Using Python Programming<td>Indiain Institute of Information Technology Kottayam<td>June 10 - 14, 2024<td>5 Days</tr>
@@ -189,7 +214,7 @@
             <div class="tab-pane fade" id="tab9" role="tabpanel" aria-labelledby="tab9-tab">
 				<h2>Papers Presented in Conferences</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Paper Title   <th> Conference Name, Organizing Institute, Place  <th> Period </tr>
+				<thead class="table-header"><tr><th>Paper Title   <th> Conference Name, Organizing Institute, Place  <th> Period </tr></thead>
 				
 				<td>Palm Vision: An Improved Disease Detection System in Coconut Plants using Deep Learning Techniques<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024) at Malla Reddy College of Engineering & Technology, Hyderabad, India <td>June 21-22, 2024. </td>
 
@@ -262,7 +287,7 @@
 				
 				<h2>Ph.D. Students</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr>
+				<thead class="table-header"><tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr></thead>
 				<tr><td> - <td>IIIT Kottayam, Pala, Kerala<td> On going <td>Mr. Binu T.O.</tr>
 				<tr><td> Model Explainability for human facial emotion recognition<td>IIIT Kottayam, Pala, Kerala<td> On going <td>Ms. Jane George</tr>
 				<tr><td> Lung Cancer Nodule detection using Deep Learning techniques  <td>IIIT Kottayam, Pala, Kerala (Co-Guide)<td> On going <td>Ms. Ruchi Rani </tr>
@@ -272,7 +297,7 @@
 
 				<h2>PG Students</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr>
+				<thead class="table-header"><tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr></thead>
 				
 				<tr><td> Power System Resilience A Machine Learning Approach  <td>Indian Institute of Information
 				Technology, Kottayam <td>Aug 2023 - May 2024  <td>Mr. Gokul Govind </tr>
@@ -293,7 +318,7 @@
 				
 				<h2>UG Students</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr>
+				<thead class="table-header"><tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr></thead>
 				
 				<tr><td>Multi-Modal Emotion Recognition from Audio and Visual Data<td>Indian Institute of Information Technology, Kottayam <td>Aug. 2023 - May 2024 <td>Eenadula Bhanuprakash<br>Maridu Laasya Sri<br>Guda Phanish<br>Gotam Gorabh</tr>
 
@@ -307,24 +332,187 @@
 
 				<h2>Live Projects</h2>
 				<table class="table table-bordered table-striped table-hover">
-				<tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr>
+				<thead class="table-header"><tr><th>Title<th>Organization, Place  <th>During<th>Student Name </tr></thead>
 				<tr><td> University Admission Process Automation<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012 <td>Desu Sathvik <br> Dhulipalla Satya Sai Akshay <br>  Motamarri Chetan </tr>
 				<tr><td> Student Information System   <td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012  <td>Narisetti Karishma <br> Paladugu Saranya <br> Yarlagadda Chanti </tr>
 				<tr><td> Student Feedback System  <td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012  <td>Yarra Ramdasu <br> Achala Ramu <br> A. Venkata Naga Kailash </tr>
 				<tr><td> Academic and Emotional Progression of Student<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012  <td>Choppa Abhiram Kumar <br> Dasari Venkata Avinash <br> Gajula Leela Naga Devi </tr>
 				<tr><td> Faculty Assessment System<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012  <td>G. Siva Rama Krishna <br> G. Dhanunjaya Lakshmi <br> Jangala Sunny </tr>
 				<tr><td> University Examinations Automation   <td>VFSTR University, Guntur, Andhra Pradesh, India.<td>Nov. 2011 - May 2012  <td>R. Sri Anjaneya Sai Swaroop <br> Vadlamudi Sai Saketh Ram <br> Dantu Pavan Kumar </tr></table>
-
 			</div>
+			<div class="tab-pane fade" id="fdp" role="tabpanel" aria-labelledby="fdp-tab">
+			<h2>Workshops/FDPs Attended</h2>
+				<table class="table table-bordered table-striped table-hover">
+				<thead class="table-header"><tr><th>Title<th>Organizing Institute, Place<th>Period</tr></thead>
+
+				<tr><td>AICTE Training And Learning (ATAL) Academy Online FDP on "Data Sciences"<td>AICTE & GITAM University, Vishakhapatnam<td>4th – 8th        Jan. 2021<td>5 Days</tr>
+
+				<tr><td>AICTE Training And Learning (ATAL) Academy Online FDP on "Cloud Technology"<td>AICTE & GITAM<td> University, Vishakhapatnam<td>16th – 20th        Nov. 2020
+				5 Days</tr>
+
+				<tr><td>One week FDP on “Deep Learning and
+				its Applications”<td>Malla Reddy Engineering College, Maisammaguda, Secunderabad-<td>7th – 12th        Dec. 2020<td>6 Days</tr>
+
+				<tr><td>MHRD Sponsored Workshop on “Cloud & Edge Computing for Big Data Analytics”<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.<td>16th – 20th        Dec. 2019
+				<td>5 Days</tr>
+
+				<tr><td>One week FDP on “Advanced Deep Learning Techniques”<td>Electronics & ICT Academy, National Institute of Technology, Warangal, Telangana, India.<td>13th – 18th        May 2019
+				<td>6 Days</tr>
+
+				<tr><td>Five Days FDP on “Deep Learning with TensorFlow & R Programming”<td>Kalasalingam Academy of Research & Education, Krishankoil, Tamil Nadu, India<td>11th – 15th        Dec. 2018
+				<td>5 Days</tr>
+
+				<tr><td>FDP on “Artificial Intelligence using Deep Learning & Machine Learning”<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.<td>26th – 30th        Nov. 2018
+				<td>5 Days</tr>
+
+				<tr><td>Five Days Short term course on “Software Engineering”<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.<td>27th – 1st        Dec. 2017
+				<td>5 Days</tr>
+
+				<tr><td>One Week International Workshop on “Machine Learning”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>7th – 12th  July 2014
+				<td>6 Days</tr>
+
+				<tr><td>Five Days workshop on “Data Mining”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>7th – 11th  July 2012
+				<td>5 Days</tr>
+
+				<tr><td>FDP on “Linux Internals”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>27th – 29th April 2014
+				<td>3 Days</tr>
+
+				<tr><td>Three Days Workshop on “Cloud Computing & Applications”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>7th – 9th Mar. 2014
+				<td>3 Days</tr>
+
+				<tr><td>Workshop on “Python Programming”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>26th-27th Feb. 2016
+				<td>2 Days</tr>
+
+				<tr><td>Workshop on “Mobile Application Development”<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>22nd-23rd Mar. 2014
+				<td>2 Days</tr>
+
+				<tr><td>Two Days Workshop on “Cluster Computing with Linux”<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.<td>11th-12th Aug. 2008
+				<td>2 Days</tr>
+
+				<tr><td>Two Day National Workshop on “J2EE & Web Technologies”<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.<td>8th-9th Sept. 2007
+				<td>2 Days</tr>
+
+				<tr><td>Faculty Development & Training Program on Spoken Tutorial based Software Training<td>VFSTR University, Guntur, Andhra Pradesh, India.<td>5th Dec. 2013
+				<td>1 Day</tr></table>
+			</div>
+			<div class="tab-pane fade" id="teach" role="tabpanel" aria-labelledby="teach-tab">
+				<h2>Subjects Taught</h2>
+				<table class="table table-bordered table-striped table-hover">
+				<thead class="table-header"><tr><td><b>Core<td><b>Programming<td><b>Research</tr></thead>
+				<tr>
+
+				<td valign='top' style='padding-top: 0'>Operating Systems<br>
+				Database Systems<br>
+				Computer Networks<br>
+				Software Engineering<br>
+				Design & Analysis of Algorithms
+
+				<td valign='top' style='padding-top: 0'>Java Programming<br>
+				Web Technologies<br>
+				Python Programming<br>
+				Unix & Shell Programming<br>
+				C & C++	Machine Learning
+				
+				<td valign='top' style='padding-top: 0'>Digital Image Processing<br>
+				Artificial Neural Networks<br>
+				Data Mining<br>
+				Information Retrieval Systems</tr></table>
+			</div>
+			<div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
+				<h2>Research Interests</h2>
+				<table class="table table-bordered table-striped table-hover">
+				<tr><td>
+				<ul>
+					<li>Computer Vision
+					<td><li>Machine Learning
+					<td><li>Data Mining
+					<td><li>Internet of Things
+					<td><li>Big Data Analytics
+				</ul>
+				</tr></table>
+			</div>
+			<div class="tab-pane fade" id="references" role="tabpanel" aria-labelledby="references-tab">
+				<h2>Professional References</h2>
+				<table class="table table-bordered table-striped table-hover">
+				<tr><th>Dr. N. P. Gopalan<th>Dr. C. Mala<th>Dr. R. Mohan</tr>
+				<tr><td valign='top' style='padding-top: 0'><b>Professor(HAG)(Retd.)</b>& <br>
+				Research Supervisor <br>
+				Department of Computer Applications, National Institute of Technology, Tiruchirappalli.<br>
+				Tamilnadu – 620015.<br>
+				Email:
+				npgopalan@nitt.edu, 
+				npgopalan@yahoo.com <br>
+				Phone: 
+				 +91 9443416970
+				 
+				<td valign='top' style='padding-top: 0'><b>Professor</b>& <br>
+				Co-Supervisor <br>
+				Department of Computer Science & Engineering, National Institute of Technology, Tiruchirappalli.<br>
+				Tamilnadu – 620015.<br>
+				Email:
+				mala@nitt.edu, 
+				cmala123@gmail.com <br>
+				Phone: 
+				 +91 9443559523
+				<td valign='top' style='padding-top: 0'><b>Assistant Professor</b><br>
+				Department of Computer Science & Engineering, National Institute of Technology, Tiruchirappalli.<br>
+				Tamilnadu – 620015.<br>
+				Email:
+				rmohan@nitt.edu, 
+				rmohan.nitt@gmail.com <br>
+				Phone:
+				 +91 9442421326
+				 </tr></table>
+			</div>
+			<div class="tab-pane fade" id="references" role="tabpanel" aria-labelledby="references-tab">
+				<table class="table table-bordered table-striped table-hover">
+				<tr><th>Personal Information<th>Address for Communication<th>Permanant Address</tr>
+				<tr><td>Name: Sivaiah Bellamkonda<br> 
+				Gender: Male<br>
+				D.O.B: 27-05-1986<br>
+				Religion: Hindu<br>
+				Nationality: Indian<br>
+				Languages Known:<br> Telugu: Fluent<br>
+						English: Fluent<br>
+						Hindi: Medium<br>
+				Father’s Name: Sankara Rao<br>
+				Mother’s Name: Chilakamma<br>
+				Marital Status: Married<br>
+				<td>Dr. Sivaiah Bellamkonda,<br>
+				Room No AA – 104,<br>
+				Assistant Professor,<br>
+				Computer Science & Engineering,<br>
+				Valavoor P.O., Pala,<br> Kottayam-686635, Kerala, India.<br>
+				Land Line: +91-0482-2202170<br>
+				Mobile Number:	+91 8142274581<br>
+				Email	sivaiah.bk@gmail.com, <br>
+				sivaiah78@gmail.com
+
+				<td>D. No. 11-1,<br>
+				Sangam Jagarlamudi Post,<br>
+				Tenali Mandal, <br>
+				Guntur  - 522213,<br>
+				Andhra Pradesh, India.
+				</tr>
+				</table>
+            </div>
+			<div class="tab-pane fade" id="decl" role="tabpanel" aria-labelledby="decl-tab">	
+			<h2>Declaration</h2>
+			<p align='justify'>I hereby declare that all statements made in the application are true, complete and correct to the best of my knowledge and belief. In the event of any information being found false or incorrect at any point of time, my appointment may be cancelled without any notice.</p>
+			<p align='left'>Place: IIIT Kottayam<br>Date: <span id="todaysDate"></span></p>
+			<p align='right' class="signature">Dr. Sivaiah Bellamkonda</p>
+		</div>	
         </div>
-		<hr/>
+		<hr id="visitor"/>
+		
+		
 		<!-- BEGIN: Powered by Supercounters.com -->
- <h2>Visitor # <script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script><script type="text/javascript">sc_hit(1693645, Math.floor(Math.random() * 100) + 1 ,5);</script></h2>
+ <h2 id="visitor">Visitor # <script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script><script type="text/javascript">sc_hit(1693645, Math.floor(Math.random() * 100) + 1 ,5);</script>
  
 <!-- END: Powered by Supercounters.com -->
 <!-- BEGIN: Powered by Supercounters.com -->
  <script type="text/javascript" src="//widget.supercounters.com/ssl/map.js"></script><script type="text/javascript">var sc_map_var = sc_map_var || [];sc_map(1693647,"112288","ff0000",56)</script>
- 
+ </h2>
 <!-- END: Powered by Supercounters.com -->
 
     </div>
@@ -333,5 +521,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		function getTodayDate() {
+				var today = new Date();
+				var year = today.getFullYear();
+				var month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+				var day = String(today.getDate()).padStart(2, '0');
+				return day+ '-' + month+ '-' +year ;
+			}
+        // Function to show all tab panes when printing
+        function showTabPanesForPrint() {
+            var tabPanes = document.querySelectorAll('.tab-pane');
+            tabPanes.forEach(function(pane) {
+                pane.classList.add('show', 'active');
+            });
+        }
+
+        // Wait for document to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listener for before print event
+            window.addEventListener('beforeprint', function() {
+                showTabPanesForPrint();
+            });
+        });
+		document.getElementById('todaysDate').textContent = getTodayDate();
+    </script>
 </body>
 </html>
