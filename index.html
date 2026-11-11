@@ -294,6 +294,27 @@
 		.nowrap { white-space: nowrap; }
 		.muted { color: var(--muted); }
 
+		/* Fixed column widths: long titles get the room, short columns stay compact */
+		.table.cols { table-layout: fixed; width: 100%; min-width: 720px; font-size: .9rem; }
+		.table.cols td, .table.cols th { padding: .6rem .75rem; overflow-wrap: anywhere; }
+		.table.cols .nowrap { white-space: normal; }
+		.table.cols td:last-child { overflow-wrap: normal; }
+		.t-events th:nth-child(1) { width: 45%; } .t-events th:nth-child(2) { width: 29%; }
+		.t-events th:nth-child(3) { width: 17%; } .t-events th:nth-child(4) { width: 9%; }
+		.t-pres th:nth-child(1) { width: 40%; } .t-pres th:nth-child(2) { width: 44%; }
+		.t-pres th:nth-child(3) { width: 16%; }
+		.t-stud th:nth-child(1) { width: 42%; } .t-stud th:nth-child(2) { width: 23%; }
+		.t-stud th:nth-child(3) { width: 17%; } .t-stud th:nth-child(4) { width: 18%; }
+		.t-team th:nth-child(1) { width: 35%; } .t-team th:nth-child(2) { width: 21%; }
+		.t-team th:nth-child(3) { width: 17%; } .t-team th:nth-child(4) { width: 27%; }
+		.t-exp th:nth-child(1) { width: 19%; } .t-exp th:nth-child(2) { width: 48%; }
+		.t-exp th:nth-child(3) { width: 20%; } .t-exp th:nth-child(4) { width: 13%; }
+		.t-edu th:nth-child(1) { width: 24%; } .t-edu th:nth-child(2) { width: 60%; }
+		.t-edu th:nth-child(3) { width: 16%; }
+		.t-rev th:nth-child(1) { width: 22%; } .t-rev th:nth-child(2) { width: 78%; }
+		.t-rev { min-width: 0 !important; }
+		.table.cols .tag { white-space: normal; }
+
 		.tag {
 			display: inline-block;
 			font-size: .74rem;
@@ -458,22 +479,130 @@
 			ol.pubs>li { padding-left: 46px; }
 		}
 
+		/* ================= PRINT (Ctrl+P) — A4 résumé layout ================= */
+		@page {
+			size: A4;
+			margin: 11mm 11mm 13mm;
+
+			@bottom-left {
+				content: "Dr. Sivaiah Bellamkonda — Curriculum Vitae";
+				font: 7.5pt 'Inter', sans-serif;
+				color: #8a93a3;
+			}
+
+			@bottom-right {
+				content: "Page " counter(page) " of " counter(pages);
+				font: 7.5pt 'Inter', sans-serif;
+				color: #8a93a3;
+			}
+		}
+
 		@media print {
-			body { background: #fff; font-size: 12px; }
-			.hero { background: none !important; color: var(--ink); padding: 0 0 10px; }
-			.hero::after, .chip i { display: none; }
-			.chip { background: none; border: 0; color: var(--ink); padding: 0 8px 0 0; }
-			.interests span { background: none; color: var(--ink); border-color: #999; }
-			.avatar { width: 90px; height: 90px; box-shadow: none; }
-			.stats, .tabbar, .pub-tools, .nav-tabs, .nav-item { display: none !important; }
+			/* Undo Bootstrap's print rules (A3 page + 992px min-width shrink everything) */
+			html, body, .container { min-width: 0 !important; }
+			.container { max-width: none !important; width: auto !important; padding: 0 !important; }
+			a, a:not(.btn) { text-decoration: none !important; color: inherit; }
+
+			body {
+				background: #fff;
+				color: #111;
+				font-size: 9.3pt;
+				line-height: 1.38;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			/* Header */
+			.hero {
+				background: none !important;
+				color: #111;
+				padding: 0 0 7pt;
+				margin-bottom: 9pt;
+				border-bottom: 2pt solid var(--brand);
+				overflow: visible;
+			}
+			.hero::after { display: none; }
+			.hero-inner { flex-direction: row !important; text-align: left !important; gap: 13pt !important; }
+			.avatar { width: 66pt; height: 66pt; border: 1pt solid #c9d3e8; box-shadow: none; }
+			.hero h1 { font-size: 20pt; color: var(--brand); margin-bottom: 1pt; }
+			.hero .role { font-size: 10pt; opacity: 1; margin-bottom: 1pt; }
+			.hero .addr { font-size: 8.8pt; opacity: 1; color: #444; margin-bottom: 2pt; }
+			.chips { gap: 0; justify-content: flex-start !important; }
+			.chip { background: none; border: 0; color: #111; padding: 0 12pt 0 0; font-size: 8.8pt; }
+			.chip i { color: var(--brand); }
+			.interests { margin-top: 3pt; gap: 0; justify-content: flex-start !important; }
+			.interests span {
+				background: none; border: 0; padding: 0; color: var(--brand);
+				font-size: 7.6pt; font-weight: 600;
+			}
+			.interests { flex-wrap: nowrap; }
+			.interests span { white-space: nowrap; letter-spacing: .03em; }
+			.interests span+span::before { content: "•"; margin: 0 5pt; color: #9aa6bf; }
+
+			/* Hide screen-only UI; show every pane */
+			.stats, .tabbar, .pub-tools, .no-results, #visitor, footer,
+			h2 .count, h2 i { display: none !important; }
 			.tab-content { padding: 0; }
 			.tab-pane { display: block !important; opacity: 1 !important; visibility: visible; height: auto; }
-			.panel { box-shadow: none; border: 0; padding: 0; margin-bottom: 14px; break-inside: auto; }
-			.table-header, thead { display: table-header-group; }
-			ol.pubs>li { padding: 4px 0 4px 34px; break-inside: avoid; }
-			ol.pubs>li::before { top: 5px; }
-			.doi { border: 0; padding: 0; }
-			#visitor, footer { display: none; }
+
+			/* Sections */
+			.panel { border: 0; border-radius: 0; box-shadow: none; padding: 0; margin: 0 0 9pt; background: none; }
+			h2 {
+				font-size: 10.5pt;
+				text-transform: uppercase;
+				letter-spacing: .09em;
+				color: var(--brand);
+				border-bottom: .8pt solid #b8c4de;
+				padding-bottom: 2pt;
+				margin: 0 0 4pt;
+				break-after: avoid;
+				page-break-after: avoid;
+			}
+			h5 { font-size: 9.2pt; margin: 5pt 0 2pt; break-after: avoid; }
+
+			/* Tables */
+			.table-wrap { border: 0; border-radius: 0; overflow: visible; }
+			.table.cols { min-width: 0; }
+			.table, .table.cols { font-size: 8.4pt; }
+			.table td, .table th, .table.cols td, .table.cols th {
+				padding: 2.2pt 5pt; border-top: .5pt solid #dfe4ec;
+			}
+			.table thead th {
+				background: #eef2f9 !important;
+				color: #2b3550;
+				font-size: 7.2pt;
+				padding: 2.8pt 5pt !important;
+				border-bottom: .8pt solid #c9d3e8;
+			}
+			.table-hover tbody tr:hover { background: none; }
+			thead, .table-header { display: table-header-group; }
+			tr { break-inside: avoid; page-break-inside: avoid; }
+			.tag { background: none !important; padding: 0; font-size: 8pt; font-weight: 600; color: #333; }
+			.tag.ok { color: #1d7a45; }
+			.tag.now { color: #9a5f0a; }
+
+			/* Publications: compact numbered references */
+			ol.pubs>li { padding: 1.6pt 0 1.6pt 21pt; border: 0; border-radius: 0; break-inside: avoid; }
+			ol.pubs>li+li { margin-top: 0; }
+			ol.pubs>li:hover { background: none; }
+			ol.pubs>li::before {
+				content: "[" counter(pub) "]";
+				width: auto; height: auto; background: none; display: block;
+				left: 0; top: 1.6pt; font-size: 8.4pt; color: var(--brand);
+			}
+			.pub-meta { display: inline; margin-left: 3pt; }
+			.pub-meta>* { margin-left: 3pt; }
+			.idx { font-size: 6.8pt; padding: 0 3.5pt; border-radius: 3pt; }
+			.doi { border: 0; padding: 0; font-size: 7.8pt; color: var(--brand-2); }
+			.doi i { display: none; }
+			.idx, .doi { white-space: nowrap; word-break: normal; }
+
+			/* Lists, patents, misc */
+			ol.clean li { padding: 0; }
+			.patent { border: 0; border-radius: 0; padding: 1.5pt 0; margin: 0; gap: 8pt; break-inside: avoid; }
+			.patent i { font-size: 10pt; }
+			.patent .m { font-size: 8.2pt; }
+			p.signature { font-size: 17pt; margin: 0; }
 		}
 	</style>
 </head>
@@ -547,7 +676,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-mortarboard"></i> Education</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-edu table-hover">
 							<thead class="table-header">
 								<tr><th>Degree</th><th>University</th><th>Period</th></tr>
 							</thead>
@@ -569,7 +698,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-briefcase"></i> Experience</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-exp table-hover">
 							<thead class="table-header">
 								<tr><th>Role</th><th>Institute</th><th>Period</th><th>Duration</th></tr>
 							</thead>
@@ -973,7 +1102,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-calendar-event"></i> Organizer / Coordinator – Workshops, Conferences &amp; Events</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-events table-hover">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
 							</thead>
@@ -1013,7 +1142,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-pencil-square"></i> Guest Editor / Reviewer / Session Chair</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-rev table-hover">
 							<thead class="table-header">
 								<tr><th>Role</th><th>Journal / Conference Details</th></tr>
 							</thead>
@@ -1043,7 +1172,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-mic"></i> Resource Person – Workshops / FDPs</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-events table-hover">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
 							</thead>
@@ -1089,7 +1218,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-display"></i> Papers Presented in Conferences</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-pres table-hover">
 							<thead class="table-header">
 								<tr><th>Paper Title</th><th>Conference, Organizing Institute, Place</th><th>Period</th></tr>
 							</thead>
@@ -1216,7 +1345,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-mortarboard"></i> Ph.D. Scholars <span class="count" data-count="#phd tbody tr"></span></h2>
 					<div class="table-wrap">
-						<table class="table table-hover" id="phd">
+						<table class="table cols t-stud table-hover" id="phd">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organization, Place</th><th>Status</th><th>Scholar</th></tr>
 							</thead>
@@ -1245,7 +1374,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-person-video3"></i> PG Students <span class="count" data-count="#pg tbody tr"></span></h2>
 					<div class="table-wrap">
-						<table class="table table-hover" id="pg">
+						<table class="table cols t-stud table-hover" id="pg">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Student</th></tr>
 							</thead>
@@ -1300,7 +1429,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-people"></i> UG Students <span class="count" data-count="#ug tbody tr"></span></h2>
 					<div class="table-wrap">
-						<table class="table table-hover" id="ug">
+						<table class="table cols t-team table-hover" id="ug">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Students</th></tr>
 							</thead>
@@ -1345,7 +1474,7 @@
 				<section class="panel">
 					<h2><i class="bi bi-gear"></i> Live Projects</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-team table-hover">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Students</th></tr>
 							</thead>
@@ -1385,7 +1514,7 @@
 				<section class="panel">
 					<h2>Workshops / FDPs Attended</h2>
 					<div class="table-wrap">
-						<table class="table table-hover">
+						<table class="table cols t-events table-hover">
 							<thead class="table-header">
 								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
 							</thead>
