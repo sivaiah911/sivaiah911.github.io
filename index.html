@@ -5,1329 +5,1609 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-		content="Dr. Sivaiah Bellamkonda is an accomplished assistant professor in Computer Vision, Machine Learning & IoT, with over a decade of experience in teaching, research, and innovation. His website highlights detailed academic qualifications (B.Tech, M.Tech, Ph.D.), notable patents in facial recognition and IoT systems, published SCI/Scopus articles, student mentorship outcomes, and live student-led research at IIIT Kottayam. The site serves as a comprehensive professional profile for collaborators, students, and academic peers.">
+		content="Dr. Sivaiah Bellamkonda is an accomplished assistant professor in Computer Vision, Machine Learning & IoT, with over a decade of experience in teaching, research, and innovation. His website highlights detailed academic qualifications (B.Tech, M.Tech, Ph.D.), notable patents in facial recognition and IoT systems, published SCI/Scopus articles, student mentorship outcomes, and live student-led research at IIIT Kottayam. The site serves as a comprehensive professional profile for collaborators, students, and academic peers.">
 	<meta name="robots" content="index, follow">
 	<link rel="canonical" href="https://sivaiah911.github.io/">
+	<meta property="og:title" content="Dr. Sivaiah Bellamkonda, Asst. Prof., IIIT Kottayam">
+	<meta property="og:description" content="Computer Vision, Machine Learning & IoT — publications, patents, students and academic activities.">
+	<meta property="og:url" content="https://sivaiah911.github.io/">
+	<meta property="og:image" content="https://sivaiah911.github.io/Sivaiah2.jpeg">
 	<title>Dr. Sivaiah Bellamkonda, Asst. Prof., IIIT Kottayam</title>
 	<link rel="icon" type="image/png" href="favicon.ico">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
 		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap"
+		rel="stylesheet">
 	<style>
-		p.signature {
-			font-family: 'Allura', cursive;
-			/* Specify the signature-style font */
-			font-size: 18px;
-			/* Adjust font size as needed */
+		:root {
+			--ink: #1b2333;
+			--muted: #5b6577;
+			--line: #e3e7ee;
+			--bg: #f5f7fb;
+			--card: #ffffff;
+			--brand: #1f3f8f;
+			--brand-2: #2f6fd6;
+			--brand-soft: #eaf0fc;
+			--accent: #c8892b;
+			--radius: 14px;
+			--shadow: 0 1px 2px rgba(20, 30, 60, .05), 0 6px 20px rgba(20, 30, 60, .06);
+		}
+
+		html { scroll-behavior: smooth; }
+
+		body {
+			background: var(--bg);
+			color: var(--ink);
+			font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+			font-size: 15.5px;
 			line-height: 1.6;
-			/* Adjust line height for readability */
+		}
+
+		a { color: var(--brand-2); }
+		a:hover { color: var(--brand); }
+
+		/* ---------- Hero ---------- */
+		.hero {
+			background: linear-gradient(135deg, #14295e 0%, #1f3f8f 55%, #2f6fd6 100%);
+			color: #fff;
+			padding: 36px 0 70px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero::after {
+			content: "";
+			position: absolute;
+			right: -120px;
+			top: -120px;
+			width: 420px;
+			height: 420px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(255, 255, 255, .12), rgba(255, 255, 255, 0) 70%);
+			pointer-events: none;
+		}
+
+		.hero-inner {
+			display: flex;
+			align-items: center;
+			gap: 28px;
+			position: relative;
+			z-index: 1;
+		}
+
+		.avatar {
+			width: 132px;
+			height: 132px;
+			border-radius: 50%;
+			object-fit: cover;
+			transform: scaleX(-1);
+			border: 4px solid rgba(255, 255, 255, .85);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+			flex-shrink: 0;
+			background: #dfe6f5;
+		}
+
+		.hero h1 {
+			font-family: 'Source Serif 4', Georgia, serif;
+			font-weight: 700;
+			font-size: 2.2rem;
+			margin: 0 0 4px;
+			letter-spacing: -.01em;
+		}
+
+		.hero .role {
+			font-size: 1.02rem;
+			opacity: .92;
+			margin-bottom: 4px;
+		}
+
+		.hero .addr {
+			font-size: .9rem;
+			opacity: .78;
+			margin-bottom: 12px;
+		}
+
+		.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+		.chip {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 5px 12px;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, .13);
+			border: 1px solid rgba(255, 255, 255, .22);
+			color: #fff;
+			font-size: .86rem;
+			text-decoration: none;
+			transition: background .15s;
+		}
+
+		a.chip:hover { background: rgba(255, 255, 255, .24); color: #fff; text-decoration: none; }
+
+		.interests { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+
+		.interests span {
+			font-size: .78rem;
+			text-transform: uppercase;
+			letter-spacing: .06em;
+			padding: 3px 10px;
+			border-radius: 6px;
+			background: rgba(200, 137, 43, .22);
+			border: 1px solid rgba(232, 180, 100, .45);
+			color: #ffe7c2;
+		}
+
+		/* ---------- Stats ---------- */
+		.stats {
+			margin-top: -42px;
+			position: relative;
+			z-index: 2;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 12px;
+		}
+
+		.stat {
+			background: var(--card);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			padding: 14px 10px;
+			text-align: center;
+			border: 1px solid var(--line);
+		}
+
+		.stat b {
+			display: block;
+			font-family: 'Source Serif 4', Georgia, serif;
+			font-size: 1.75rem;
+			line-height: 1.1;
+			color: var(--brand);
+			font-variant-numeric: tabular-nums;
+		}
+
+		.stat small { color: var(--muted); font-size: .8rem; }
+
+		/* ---------- Tabs ---------- */
+		.tabbar {
+			position: sticky;
+			top: 0;
+			z-index: 50;
+			background: rgba(245, 247, 251, .92);
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
+			padding: 14px 0 10px;
+			margin-top: 10px;
+		}
+
+		.nav-tabs {
+			border: 0;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			gap: 6px;
+			scrollbar-width: none;
+		}
+
+		.nav-tabs::-webkit-scrollbar { display: none; }
+
+		.nav-tabs .nav-link {
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			background: var(--card);
+			color: var(--muted);
+			font-weight: 500;
+			font-size: .9rem;
+			padding: 6px 15px;
+			white-space: nowrap;
+			transition: all .15s;
+		}
+
+		.nav-tabs .nav-link i { margin-right: 4px; }
+
+		.nav-tabs .nav-link:hover { color: var(--brand); border-color: #c8d4ee; }
+
+		.nav-tabs .nav-link.active {
+			background: var(--brand);
+			border-color: var(--brand);
+			color: #fff;
+			box-shadow: 0 4px 12px rgba(31, 63, 143, .25);
+		}
+
+		/* ---------- Content ---------- */
+		.tab-content { padding: 10px 0 30px; }
+
+		.panel {
+			background: var(--card);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			padding: 22px 24px;
+			margin-bottom: 20px;
 		}
 
 		h2 {
-			color: rgb(0, 0, 200);
-			font-style: italic;
+			font-family: 'Source Serif 4', Georgia, serif;
+			font-weight: 700;
+			font-size: 1.4rem;
+			color: var(--brand);
+			margin: 0 0 16px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		h2 .count {
+			font-family: 'Inter', sans-serif;
+			font-size: .75rem;
+			font-weight: 600;
+			color: var(--brand);
+			background: var(--brand-soft);
+			padding: 2px 9px;
+			border-radius: 999px;
+		}
+
+		h5 {
+			font-weight: 600;
+			font-size: 1rem;
+			color: var(--ink);
+			margin: 18px 0 8px;
+		}
+
+		.table {
+			margin-bottom: 0;
+			font-size: .92rem;
+		}
+
+		.table-wrap {
+			border: 1px solid var(--line);
+			border-radius: 10px;
+			overflow-x: auto;
+		}
+
+		.table thead th {
+			background: #f0f3f9;
+			color: var(--muted);
+			font-size: .76rem;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			font-weight: 600;
+			border-bottom: 1px solid var(--line);
+			border-top: 0;
+			white-space: nowrap;
+		}
+
+		.table td,
+		.table th { border-top: 1px solid var(--line); vertical-align: top; padding: .7rem .85rem; }
+
+		.table tbody tr:first-child td,
+		.table tbody tr:first-child th { border-top: 0; }
+
+		.table tbody th { font-weight: 600; color: var(--ink); }
+
+		.table-hover tbody tr:hover { background: #f7f9fd; }
+
+		.nowrap { white-space: nowrap; }
+		.muted { color: var(--muted); }
+
+		.tag {
+			display: inline-block;
+			font-size: .74rem;
+			font-weight: 600;
+			padding: 2px 8px;
+			border-radius: 6px;
+			background: #eef1f6;
+			color: var(--muted);
+			white-space: nowrap;
+		}
+
+		.tag.ok { background: #e3f5ea; color: #1d7a45; }
+		.tag.now { background: #fff2dc; color: #9a5f0a; }
+
+		/* ---------- Publications ---------- */
+		.pub-tools {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			margin-bottom: 16px;
+			flex-wrap: wrap;
+		}
+
+		.pub-tools .form-control {
+			max-width: 340px;
+			border-radius: 999px;
+			border-color: var(--line);
+			padding-left: 36px;
+			background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235b6577' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E") no-repeat 13px center;
+		}
+
+		.pub-tools .hint { font-size: .82rem; color: var(--muted); }
+
+		ol.pubs {
+			list-style: none;
+			counter-reset: pub;
+			padding: 0;
+			margin: 0;
+		}
+
+		ol.pubs>li {
+			counter-increment: pub;
+			position: relative;
+			padding: 12px 14px 12px 52px;
+			border-radius: 10px;
+			border: 1px solid transparent;
+			transition: background .15s, border-color .15s;
+		}
+
+		ol.pubs>li+li { margin-top: 4px; }
+
+		ol.pubs>li:hover { background: #f7f9fd; border-color: var(--line); }
+
+		ol.pubs>li::before {
+			content: counter(pub);
+			position: absolute;
+			left: 12px;
+			top: 13px;
+			width: 28px;
+			height: 28px;
+			border-radius: 8px;
+			background: var(--brand-soft);
+			color: var(--brand);
+			font-weight: 600;
+			font-size: .8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.pub-title { font-weight: 600; color: var(--ink); }
+		.pub-venue { font-style: italic; color: #36405a; }
+		.pubs b.me { color: var(--brand); font-weight: 600; }
+
+		.pub-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px;
+			margin-top: 6px;
+			align-items: center;
+		}
+
+		.idx {
+			font-size: .72rem;
+			font-weight: 700;
+			letter-spacing: .03em;
+			padding: 2px 8px;
+			border-radius: 6px;
+		}
+
+		.idx.sci { background: #e6efff; color: #1f4fb8; }
+		.idx.esci { background: #efe8ff; color: #5b37b0; }
+		.idx.scopus { background: #fff1de; color: #a1600b; }
+		.idx.springer { background: #fde9e7; color: #b23a2b; }
+		.idx.ieee { background: #e2f3fa; color: #0b6a8f; }
+
+		.doi {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+			font-size: .78rem;
+			font-weight: 500;
+			padding: 2px 9px;
+			border-radius: 6px;
+			border: 1px solid #cfdaf2;
+			color: var(--brand-2);
+			text-decoration: none;
+			word-break: break-all;
+		}
+
+		.doi:hover { background: var(--brand-soft); text-decoration: none; }
+
+		.no-results { display: none; color: var(--muted); padding: 10px 14px; }
+
+		/* ---------- Lists ---------- */
+		ol.clean { padding-left: 1.3rem; margin-bottom: 0; }
+		ol.clean li { padding: 3px 0; }
+		ol.clean li::marker { color: var(--brand); font-weight: 600; }
+
+		.patent {
+			display: flex;
+			gap: 14px;
+			padding: 14px;
+			border: 1px solid var(--line);
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+
+		.patent i {
+			font-size: 1.4rem;
+			color: var(--accent);
+			flex-shrink: 0;
+		}
+
+		.patent .t { font-weight: 600; }
+		.patent .m { font-size: .88rem; color: var(--muted); }
+
+		/* ---------- Footer ---------- */
+		footer {
+			text-align: center;
+			color: var(--muted);
+			font-size: .85rem;
+			padding: 10px 0 40px;
+		}
+
+		#visitor h2 { justify-content: center; font-size: 1rem; color: var(--muted); }
+
+		p.signature {
+			font-family: 'Allura', cursive;
+			font-size: 18px;
+			line-height: 1.6;
+		}
+
+		@media (max-width: 767px) {
+			.hero { padding: 26px 0 64px; }
+			.hero-inner { flex-direction: column; text-align: center; gap: 14px; }
+			.chips, .interests { justify-content: center; }
+			.hero h1 { font-size: 1.7rem; }
+			.stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+			.stat b { font-size: 1.4rem; }
+			.panel { padding: 16px; }
+			ol.pubs>li { padding-left: 46px; }
 		}
 
 		@media print {
-
-			.nav-tabs,
-			.nav-item {
-				display: none !important;
-				/* Hide tab navigation */
-			}
-
-			.tab-content {
-				padding: 0;
-				/* Remove padding for printing */
-			}
-
-			.tab-pane {
-				display: block !important;
-				visibility: visible;
-				/* Ensure all tab panes are visible */
-				height: auto;
-				/* Ensure auto height for printed content */
-			}
-
-			.table-header {
-				display: table-header-group;
-				/* Ensures header is repeated */
-			}
-
-			#visitor {
-				display: none;
-			}
+			body { background: #fff; font-size: 12px; }
+			.hero { background: none !important; color: var(--ink); padding: 0 0 10px; }
+			.hero::after, .chip i { display: none; }
+			.chip { background: none; border: 0; color: var(--ink); padding: 0 8px 0 0; }
+			.interests span { background: none; color: var(--ink); border-color: #999; }
+			.avatar { width: 90px; height: 90px; box-shadow: none; }
+			.stats, .tabbar, .pub-tools, .nav-tabs, .nav-item { display: none !important; }
+			.tab-content { padding: 0; }
+			.tab-pane { display: block !important; opacity: 1 !important; visibility: visible; height: auto; }
+			.panel { box-shadow: none; border: 0; padding: 0; margin-bottom: 14px; break-inside: auto; }
+			.table-header, thead { display: table-header-group; }
+			ol.pubs>li { padding: 4px 0 4px 34px; break-inside: avoid; }
+			ol.pubs>li::before { top: 5px; }
+			.doi { border: 0; padding: 0; }
+			#visitor, footer { display: none; }
 		}
 	</style>
 </head>
 
-<body style='margin-top: -50px;'>
-	<div class="container mt-5">
-
-		<div style='display: flex; align-items: flex-end; margin:0'>
-			<img src='Sivaiah2.jpeg' width='120px' class="rounded" style='margin-right: 10px;transform: scaleX(-1);' />
-			<div style='display: block; margin:0;'>
-				<h2 style='margin-bottom: 0;'>Dr. Sivaiah Bellamkonda </h2>
-				<h6 style='line-height: 20px;'> Assistant Professor, Computer Science & Engineering,<br> Indian
-					Institute of Information Technology Kottayam,<br>Valavoor P.O., Pala - 686635, Kerala.<br> <i
-						class="bi bi-envelope"> sivaiah@iiitkottayam.ac.in</i> <br> <i class="bi bi-telephone"> +91 0482
-						2202170</i> </h6>
+<body>
+	<!-- ===================== HERO ===================== -->
+	<header class="hero">
+		<div class="container">
+			<div class="hero-inner">
+				<img src="Sivaiah2.jpeg" alt="Dr. Sivaiah Bellamkonda" class="avatar" />
+				<div>
+					<h1>Dr. Sivaiah Bellamkonda</h1>
+					<div class="role">Assistant Professor, Computer Science &amp; Engineering<br>Indian Institute of
+						Information Technology Kottayam</div>
+					<div class="addr"><i class="bi bi-geo-alt"></i> Valavoor P.O., Pala - 686635, Kerala, India</div>
+					<div class="chips">
+						<a class="chip" href="mailto:sivaiah@iiitkottayam.ac.in"><i class="bi bi-envelope"></i>
+							sivaiah@iiitkottayam.ac.in</a>
+						<a class="chip" href="tel:+914822202170"><i class="bi bi-telephone"></i> +91 0482 2202170</a>
+					</div>
+					<div class="interests">
+						<span>Computer Vision</span><span>Machine Learning</span><span>Deep Learning</span><span>Internet
+							of Things</span><span>Big Data Analytics</span>
+					</div>
+				</div>
 			</div>
 		</div>
-		<hr />
-		<ul class="nav nav-tabs" id="myTab" role="tablist">
-			<!-- Tab headers -->
-			<li class="nav-item">
-				<a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1"
-					aria-selected="true">Bio</a>
-			</li>
+	</header>
 
-			<!-- Add more tabs here -->
+	<div class="container">
+		<!-- ===================== STATS ===================== -->
+		<section class="stats" aria-label="Highlights">
+			<div class="stat"><b id="st-journals">–</b><small>Journal articles</small></div>
+			<div class="stat"><b id="st-chapters">–</b><small>Book chapters</small></div>
+			<div class="stat"><b id="st-confs">–</b><small>Conference papers</small></div>
+			<div class="stat"><b id="st-patents">–</b><small>Patents</small></div>
+			<div class="stat"><b id="st-phd">–</b><small>Ph.D. scholars</small></div>
+			<div class="stat"><b id="st-exp">–</b><small>Years experience</small></div>
+		</section>
 
-			<li class="nav-item">
-				<a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4"
-					aria-selected="false">Journals</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5"
-					aria-selected="false">Conferences</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3"
-					aria-selected="false">Patents </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab6-tab" data-toggle="tab" href="#tab6" role="tab" aria-controls="tab6"
-					aria-selected="false">Organizer</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab7-tab" data-toggle="tab" href="#tab7" role="tab" aria-controls="tab7"
-					aria-selected="false">Reviewer </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab8-tab" data-toggle="tab" href="#tab8" role="tab" aria-controls="tab8"
-					aria-selected="false">Talks</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab9-tab" data-toggle="tab" href="#tab9" role="tab" aria-controls="tab9"
-					aria-selected="false">Presentations</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab10-tab" data-toggle="tab" href="#tab10" role="tab" aria-controls="tab10"
-					aria-selected="false">Awards</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="tab11-tab" data-toggle="tab" href="#tab11" role="tab" aria-controls="tab11"
-					aria-selected="false">Students</a>
-			</li>
-		</ul>
+		<!-- ===================== TABS ===================== -->
+		<div class="tabbar">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+						aria-controls="tab1" aria-selected="true"><i class="bi bi-person"></i>Bio</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab"
+						aria-controls="tab4" aria-selected="false"><i class="bi bi-journal-text"></i>Journals</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab"
+						aria-controls="tab5" aria-selected="false"><i class="bi bi-easel"></i>Conferences</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab"
+						aria-controls="tab3" aria-selected="false"><i class="bi bi-lightbulb"></i>Patents</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab6-tab" data-toggle="tab" href="#tab6" role="tab"
+						aria-controls="tab6" aria-selected="false"><i class="bi bi-calendar-event"></i>Organizer</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab7-tab" data-toggle="tab" href="#tab7" role="tab"
+						aria-controls="tab7" aria-selected="false"><i class="bi bi-pencil-square"></i>Reviewer</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab8-tab" data-toggle="tab" href="#tab8" role="tab"
+						aria-controls="tab8" aria-selected="false"><i class="bi bi-mic"></i>Talks</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab9-tab" data-toggle="tab" href="#tab9" role="tab"
+						aria-controls="tab9" aria-selected="false"><i class="bi bi-display"></i>Presentations</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab10-tab" data-toggle="tab" href="#tab10" role="tab"
+						aria-controls="tab10" aria-selected="false"><i class="bi bi-award"></i>Awards</a></li>
+				<li class="nav-item"><a class="nav-link" id="tab11-tab" data-toggle="tab" href="#tab11" role="tab"
+						aria-controls="tab11" aria-selected="false"><i class="bi bi-people"></i>Students</a></li>
+			</ul>
+		</div>
+
 		<div class="tab-content" id="myTabContent">
-			<!-- Tab content -->
+
+			<!-- ===================== BIO ===================== -->
 			<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-				<h2>Education</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Degree
-							<th>University
-							<th>Period
-						</tr>
-					</thead>
+				<section class="panel">
+					<h2><i class="bi bi-mortarboard"></i> Education</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Degree</th><th>University</th><th>Period</th></tr>
+							</thead>
+							<tbody>
+								<tr><th>Doctor of Philosophy<br><span class="muted">Ph.D.</span></th>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India</td>
+									<td class="nowrap">2016 – 2020</td></tr>
+								<tr><th>Master of Technology<br><span class="muted">M.Tech. (CSE)</span></th>
+									<td>Jawaharlal Nehru Technological University, Kakinada, Andhra Pradesh, India</td>
+									<td class="nowrap">2008 – 2010</td></tr>
+								<tr><th>Bachelor of Technology<br><span class="muted">B.Tech. (CSE)</span></th>
+									<td>Jawaharlal Nehru Technological University, Hyderabad, Andhra Pradesh, India</td>
+									<td class="nowrap">2003 – 2007</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 
-					<tr>
-						<th>Doctor of Philosophy<br>Ph.D.
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India
-						<td> 2016-2020
-					</tr>
-					<tr>
-						<th>Master of Technology<br>M. Tech. (CSE)
-						<td>Jawaharlal Nehru Technological University, Kakinada, Andhra Pradesh, India
-						<td> 2008-2010
-					</tr>
-					<tr>
-						<th> Bachelor of Technology<br>B. Tech. (CSE)
-						<td> Jawaharlal Nehru Technological University, Hyderabad, Andhra Pradesh, India
-						<td> 2003-2007
-					</tr>
-				</table>
-				<h2>Experience</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Role
-							<th>Institute
-							<th>Period
-							<th>
-						</tr>
-					</thead>
-					<tr>
-						<th>Assistant Professor
-						<td>Indian Institute of Information Technology, Kottayam, Kerala (An Institute of National
-							Importance)
-						<td>July 2021 - till date
-						<td>5 Yrs
-					</tr>
-					<tr>
-						<th>Assistant Professor
-						<td>Gandhi Institute of Technology and Management (GITAM Deemed to be) University, Hyderabad.
-							(NIRF: 71)
-						<td>Aug. 2020 - July 2021
-						<td>1 Yr
-					</tr>
-					<tr>
-						<th>Research Fellow
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.
-						<td>Aug 2016 - July 2020
-						<td>4 Yrs.
-					</tr>
-					<tr>
-						<th>Assistant Professor
-						<td>Vignan's Foundation for Science, Technology &amp; Research University, Guntur, Andhra
-							Pradesh, India. (NIRF: 88)
-						<td>Oct. 2010 - July 2016
-						<td>5 Yrs. 10 Mon.
-					</tr>
-					<tr>
-						<th>Assistant Professor
-						<td>Vignan's Engineering College, Vadlamudi, Andhra Pradesh, India.
-						<td>June 2007- Sept. 2008
-						<td>1 Yr. 3 Mon.
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-briefcase"></i> Experience</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Role</th><th>Institute</th><th>Period</th><th>Duration</th></tr>
+							</thead>
+							<tbody>
+								<tr><th>Assistant Professor</th>
+									<td>Indian Institute of Information Technology, Kottayam, Kerala (An Institute of
+										National Importance)</td>
+									<td class="nowrap">July 2021 – till date</td>
+									<td class="nowrap"><span class="tag now" data-since="2021-07">5 Yrs</span></td></tr>
+								<tr><th>Assistant Professor</th>
+									<td>Gandhi Institute of Technology and Management (GITAM Deemed to be) University,
+										Hyderabad. (NIRF: 71)</td>
+									<td class="nowrap">Aug. 2020 – July 2021</td>
+									<td class="nowrap">1 Yr.</td></tr>
+								<tr><th>Research Fellow</th>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.</td>
+									<td class="nowrap">Aug. 2016 – July 2020</td>
+									<td class="nowrap">4 Yrs.</td></tr>
+								<tr><th>Assistant Professor</th>
+									<td>Vignan's Foundation for Science, Technology &amp; Research University, Guntur,
+										Andhra Pradesh, India. (NIRF: 88)</td>
+									<td class="nowrap">Oct. 2010 – July 2016</td>
+									<td class="nowrap">5 Yrs. 10 Mon.</td></tr>
+								<tr><th>Assistant Professor</th>
+									<td>Vignan's Engineering College, Vadlamudi, Andhra Pradesh, India.</td>
+									<td class="nowrap">June 2007 – Sept. 2008</td>
+									<td class="nowrap">1 Yr. 3 Mon.</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
-			<!--div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-				
-            </div-->
-			<!-- Add more tab contents here -->
+
+			<!-- ===================== PATENTS ===================== -->
 			<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-				<h2>Patents</h2>
-				<ol>
-					<li>"Computer Vision IoT-Facial Expression/Human Action Recognition" from Australian government in
-						October 2020, Patent Number: 2020103067. (Published)</li>
-					<li>"Artificial Intelligence Based Automated Temperature Detection System Integrated with Smart
-						Sanitizer Dispenser" in India in January 2021, Patent Number: 202141000294 A (Published)</li>
-					<li>"A system and the method for secure data storage classification for agent based mobile cloud"
-						from Australian government in April 2021, Patent Number: 2021101298. (Published)</li>
-				</ol>
+				<section class="panel">
+					<h2><i class="bi bi-lightbulb"></i> Patents <span class="count" data-count="#patents .patent"></span></h2>
+					<div id="patents">
+						<div class="patent"><i class="bi bi-patch-check"></i>
+							<div>
+								<div class="t">Computer Vision IoT-Facial Expression/Human Action Recognition</div>
+								<div class="m">Australian Government · October 2020 · Patent No. 2020103067 · <span
+										class="tag ok">Published</span></div>
+							</div>
+						</div>
+						<div class="patent"><i class="bi bi-patch-check"></i>
+							<div>
+								<div class="t">Artificial Intelligence Based Automated Temperature Detection System
+									Integrated with Smart Sanitizer Dispenser</div>
+								<div class="m">India · January 2021 · Application No. 202141000294 A · <span
+										class="tag ok">Published</span></div>
+							</div>
+						</div>
+						<div class="patent"><i class="bi bi-patch-check"></i>
+							<div>
+								<div class="t">A system and the method for secure data storage classification for agent
+									based mobile cloud</div>
+								<div class="m">Australian Government · April 2021 · Patent No. 2021101298 · <span
+										class="tag ok">Published</span></div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
+
+			<!-- ===================== JOURNALS ===================== -->
 			<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-				<h2>Publications - Journals</h2>
-				<ol>
-
-					<li>Rani, R., Sahoo, J., <b>Bellamkonda, S.</b> et al., "A novel framework GRCornShot for corn
-						disease detection using few shot learning with prototypical network", Scientific Reports, 15,
-						26461 (2025). <b>(SCI, IF: 3.9)</b> - <a target='_blank'
-							href='https://www.nature.com/articles/s41598-025-10870-w.pdf'>link</a></li>
-
-					<li>Ruchi Rani, Jayakrushna Sahoo, <b>Sivaiah Bellamkonda</b>, Sumit Kumar, "Attention-enhanced corn
-						disease diagnosis using few-shot learning and VGG16", MethodsX, Volume 14, June 2025, 103172.
-						<b>(ESCI, IF: 1.9)</b> - <a target='_blank'
-							href='https://doi.org/10.1016/j.mex.2025.103172'>link</a></li>
-					<li>Ruchi Rani, Jayakrushna Sahoo, <b>Sivaiah Bellamkonda</b>, Sumit Kumar, and Sanjeev Kumar
-						Pippal. "Role of Artificial Intelligence in Agriculture: An Analysis and Advancements with Focus
-						on Plant Diseases", IEEE Access, 11 (2023): 137999- 138019. <b>(SCI, IF: 3.9)</b> - <a
-							target='_blank' href='https://doi.org/10.1109/ACCESS.2023.3339375'>link</a>
-					<li><b>Sivaiah Bellamkonda</b>, Lavanya Settipalli, "EFL-LCNN: Enhanced Face Localization augmented
-						Light Convolutional Neural Network for human emotion recognition", Multimedia Tools and
-						Applications, May-2023. <b>(SCI, IF: 2.577)</b> - <a target='_blank'
-							href='https://doi.org/10.1007/s11042-023-15899-5'>link</a>
-					<li>Lavanya Settipalli, G R Gangadharan, <b>Sivaiah Bellamkonda</b>, "Extended Lightweight
-						Blockchain based collaborative healthcare system for fraud prevention", Cluster Computing,
-						2023.<b>(SCI, IF: 2.3)</b> - <a target='_blank'
-							href='https://doi.org/10.1007/s10586-023-03973-4'>link</a>
-					<li><b>Sivaiah Bellamkonda</b>, N. P. Gopalan, C. Mala, Lavanya Settipalli, "Facial Expression
-						Recognition on partially occluded faces using Component based Ensemble Stacked CNN", Cognitive
-						Neurodynamics, 2022. <b>(SCI, IF: 3.4)</b> - <a target='_blank'
-							href='https://doi.org/10.1007/s11571-022-09879-y'>link</a>
-					<li><b>Sivaiah Bellamkonda</b>, N. P. Gopalan, C. Mala, Lavanya Settipalli, "FL-CapsNet: Facial
-						localization augmented Capsule Network for human emotion recognition", Signal, Image and
-						VideoProcessing, 17, pages 1705-1713 (2023). <b>(SCI, IF:1.5)</b> - <a target='_blank'
-							href='https://doi.org/10.1007/s11760-022-02381-2'>link</a>
-					</li>
-					<li><b>Sivaiah Bellamkonda</b>, Lavanya Settipalli, Ramachandran Vedantham, Manojkumar Vemula, "An
-						enhanced earthquake prediction model using long short-term memory", Turkish Journal of Computer
-						and Mathematics Education, Vol.12 No.14, pp. 2397 - 2403, 2021. <b>(SCOPUS)</b></li>
-					<li><b>Sivaiah Bellamkonda</b>, N. P. Gopalan, "An enhanced facial expression recognition model
-						using local feature fusion of Gabor wavelets and local directionality patterns", International
-						Journal of Ambient Computing and Intelligence (IJACI), Vol. 11(1), pp.48-70, 2020. <b>(ESCI,
-							SCOPUS)</b></li>
-					<li><b>Sivaiah Bellamkonda</b>, N.P. Gopalan, " A Novel Approach to FER using PCA, Gabor Wavelets
-						and LBP," International Journal of Innovative Technology and Exploring Engineering, Volume-8
-						Issue-2S2, pp. 444-449, 2018. <b>(SCOPUS)</b></li>
-					<li>N. P. Gopalan, <b>Sivaiah Bellamkonda</b>, " Pattern Averaging Technique for Facial Expression
-						Recognition Using Support Vector Machines," International Journal of Image, Graphics and Signal
-						Processing(IJIGSP), Vol.10, No.9, pp. 27-33, 2018.<b>(SCOPUS)</b></li>
-					<li><b>Sivaiah Bellamkonda</b>, N.P. Gopalan, "A Facial Expression Recognition Model using Support
-						Vector Machines," International Journal of Mathematical Sciences and Computing(IJMSC), Vol.4,
-						No.4, pp.56-65, 2018.<b>(SCOPUS)</b></li>
-					<li>Lavanya Settipalli, <b>Sivaiah Bellamkonda</b>, Vedantham, R., "Morphology based tense aspect
-						disambiguation for sentences in Telugu to English translation", International Journal of
-						Innovative Technology and Exploring Engineering, Vol. 8, Issue-2S, pp. 51-58, 2018.
-						<b>(SCOPUS)</b></li>
-					<li>Vedantham Ramachandran, Dr. E.Srinivasa Reddy, <b>Sivaiah Bellamkonda</b>, "A novel Facial
-						Expression Classification System using Emotional Back Propagation Artificial Neural Network
-						using Genetic Algorithm", International Journal of Applied Engineering Research, Vol. 10, Number
-						17, pp. 38583-38588, 2015.<b>(SCOPUS)</b></li>
-					<li>Vedantham Ramachandran, E. Srinivasa Reddy, <b>Sivaiah Bellamkonda</b>, "An Enhanced Facial
-						Expression Classification System Using Emotional Back Propagation Artificial Neural Network with
-						DCT Approach", International Journal of Computer Science Engineering and Information Technology
-						Research (IJCSEITR) ISSN(P): 2249-6831; ISSN(E): 2249-7943 Vol. 5, Issue 4, pp. 83-94, 2015.
-					</li>
-					<li><b>Sivaiah Bellamkonda</b>, S. Lavanya, N. Murali Krishna, Prasad Challa, "Detecting Warm
-						Affected Internal Systems Through Back-door Messages" International Journal of Scientific &amp;
-						Engineering Research, Vol. 6, Issue 12, pp. 800-804, 2015.</li>
-					<li><b>Bellamkonda Sivaiah</b>, Talasila Vamsidhar, Kotha Hari Chandana, "An Efficient Approach for
-						Fingerprint Recognition by Matching Minutiae Pairings", International Journal of Advanced
-						Research in Computer Science and Software Engineering, Vol, 5, Issue 2, pp. 536-542, 2015.</li>
-					<li>V.Ramachandran, <b>Sivaiah Bellamkonda</b>, Dr. E. Srinivasa Reddy, "Facial Expression
-						Classification System with Emotional Back Propagation Neural Network", International Journal of
-						Scientific &amp; Engineering Research, Vol. 4, Issue 10, pp. 383-391, 2013.</li>
-
+				<section class="panel">
+					<h2><i class="bi bi-journal-text"></i> Publications – Journals <span class="count"
+							data-count="#journals > li"></span></h2>
+					<div class="pub-tools">
+						<input type="search" class="form-control pub-search" data-target="#journals"
+							placeholder="Search title, journal, year…" aria-label="Search journal publications">
+						<span class="hint"><span class="idx sci">SCI</span> <span class="idx esci">ESCI</span> <span
+								class="idx scopus">SCOPUS</span></span>
+					</div>
+					<ol class="pubs" id="journals">
+						<li>Rani, R., Sahoo, J., <b class="me">Bellamkonda, S.</b> et al., "<span class="pub-title">A novel
+								framework GRCornShot for corn disease detection using few shot learning with prototypical
+								network</span>", <span class="pub-venue">Scientific Reports</span>, 15, 26461 (2025).
+							<div class="pub-meta"><span class="idx sci">SCI · IF 3.9</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1038/s41598-025-10870-w"><i
+										class="bi bi-box-arrow-up-right"></i>10.1038/s41598-025-10870-w</a></div>
+						</li>
+						<li>Ruchi Rani, Jayakrushna Sahoo, <b class="me">Sivaiah Bellamkonda</b>, Sumit Kumar, "<span
+								class="pub-title">Attention-enhanced corn disease diagnosis using few-shot learning and
+								VGG16</span>", <span class="pub-venue">MethodsX</span>, Volume 14, June 2025, 103172.
+							<div class="pub-meta"><span class="idx esci">ESCI · IF 1.9</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1016/j.mex.2025.103172"><i
+										class="bi bi-box-arrow-up-right"></i>10.1016/j.mex.2025.103172</a></div>
+						</li>
+						<li>Ruchi Rani, Jayakrushna Sahoo, <b class="me">Sivaiah Bellamkonda</b>, Sumit Kumar, and Sanjeev
+							Kumar Pippal, "<span class="pub-title">Role of Artificial Intelligence in Agriculture: An
+								Analysis and Advancements with Focus on Plant Diseases</span>", <span class="pub-venue">IEEE
+								Access</span>, 11 (2023): 137999–138019.
+							<div class="pub-meta"><span class="idx sci">SCI · IF 3.9</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ACCESS.2023.3339375"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ACCESS.2023.3339375</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, Lavanya Settipalli, "<span class="pub-title">EFL-LCNN:
+								Enhanced Face Localization augmented Light Convolutional Neural Network for human emotion
+								recognition</span>", <span class="pub-venue">Multimedia Tools and Applications</span>, May
+							2023.
+							<div class="pub-meta"><span class="idx sci">SCI · IF 2.577</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/s11042-023-15899-5"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/s11042-023-15899-5</a></div>
+						</li>
+						<li>Lavanya Settipalli, G R Gangadharan, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">Extended Lightweight Blockchain based collaborative healthcare system for
+								fraud prevention</span>", <span class="pub-venue">Cluster Computing</span>, 2023.
+							<div class="pub-meta"><span class="idx sci">SCI · IF 2.3</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/s10586-023-03973-4"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/s10586-023-03973-4</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, C. Mala, Lavanya Settipalli, "<span
+								class="pub-title">Facial Expression Recognition on partially occluded faces using Component
+								based Ensemble Stacked CNN</span>", <span class="pub-venue">Cognitive Neurodynamics</span>,
+							2022.
+							<div class="pub-meta"><span class="idx sci">SCI · IF 3.4</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/s11571-022-09879-y"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/s11571-022-09879-y</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, C. Mala, Lavanya Settipalli, "<span
+								class="pub-title">FL-CapsNet: Facial localization augmented Capsule Network for human
+								emotion recognition</span>", <span class="pub-venue">Signal, Image and Video
+								Processing</span>, 17, pages 1705–1713 (2023).
+							<div class="pub-meta"><span class="idx sci">SCI · IF 1.5</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/s11760-022-02381-2"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/s11760-022-02381-2</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, Lavanya Settipalli, Ramachandran Vedantham, Manojkumar
+							Vemula, "<span class="pub-title">An enhanced earthquake prediction model using long short-term
+								memory</span>", <span class="pub-venue">Turkish Journal of Computer and Mathematics
+								Education</span>, Vol. 12, No. 14, pp. 2397–2403, 2021.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span><a class="doi" target="_blank"
+									rel="noopener"
+									href="https://turcomat.org/index.php/turkbilmat/article/view/10665"><i
+										class="bi bi-box-arrow-up-right"></i>turcomat.org</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, "<span class="pub-title">An enhanced
+								facial expression recognition model using local feature fusion of Gabor wavelets and local
+								directionality patterns</span>", <span class="pub-venue">International Journal of Ambient
+								Computing and Intelligence (IJACI)</span>, Vol. 11(1), pp. 48–70, 2020.
+							<div class="pub-meta"><span class="idx esci">ESCI</span><span
+									class="idx scopus">SCOPUS</span><a class="doi" target="_blank" rel="noopener"
+									href="https://doi.org/10.4018/IJACI.2020010103"><i
+										class="bi bi-box-arrow-up-right"></i>10.4018/IJACI.2020010103</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, "<span class="pub-title">A Novel Approach
+								to FER using PCA, Gabor Wavelets and LBP</span>", <span class="pub-venue">International
+								Journal of Innovative Technology and Exploring Engineering</span>, Volume 8, Issue 2S2,
+							pp. 444–449, 2018.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span><a class="doi" target="_blank"
+									rel="noopener" href="https://www.ijitee.org/?p=52474"><i
+										class="bi bi-box-arrow-up-right"></i>ijitee.org</a></div>
+						</li>
+						<li>N. P. Gopalan, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Pattern Averaging
+								Technique for Facial Expression Recognition Using Support Vector Machines</span>", <span
+								class="pub-venue">International Journal of Image, Graphics and Signal Processing
+								(IJIGSP)</span>, Vol. 10, No. 9, pp. 27–33, 2018.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.5815/ijigsp.2018.09.04"><i
+										class="bi bi-box-arrow-up-right"></i>10.5815/ijigsp.2018.09.04</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, "<span class="pub-title">A Facial
+								Expression Recognition Model using Support Vector Machines</span>", <span
+								class="pub-venue">International Journal of Mathematical Sciences and Computing
+								(IJMSC)</span>, Vol. 4, No. 4, pp. 56–65, 2018.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.5815/ijmsc.2018.04.05"><i
+										class="bi bi-box-arrow-up-right"></i>10.5815/ijmsc.2018.04.05</a></div>
+						</li>
+						<li>Lavanya Settipalli, <b class="me">Sivaiah Bellamkonda</b>, Vedantham, R., "<span
+								class="pub-title">Morphology based tense aspect disambiguation for sentences in Telugu to
+								English translation</span>", <span class="pub-venue">International Journal of Innovative
+								Technology and Exploring Engineering</span>, Vol. 8, Issue 2S, pp. 51–58, 2018.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span><a class="doi" target="_blank"
+									rel="noopener" href="https://www.ijitee.org/?p=52525"><i
+										class="bi bi-box-arrow-up-right"></i>ijitee.org</a></div>
+						</li>
+						<li>Vedantham Ramachandran, E. Srinivasa Reddy, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">A novel Facial Expression Classification System using Emotional Back
+								Propagation Artificial Neural Network using Genetic Algorithm</span>", <span
+								class="pub-venue">International Journal of Applied Engineering Research</span>, Vol. 10,
+							No. 17, pp. 38583–38588, 2015.
+							<div class="pub-meta"><span class="idx scopus">SCOPUS</span></div>
+						</li>
+						<li>Vedantham Ramachandran, E. Srinivasa Reddy, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">An Enhanced Facial Expression Classification System Using Emotional Back
+								Propagation Artificial Neural Network with DCT Approach</span>", <span
+								class="pub-venue">International Journal of Computer Science Engineering and Information
+								Technology Research (IJCSEITR)</span>, ISSN(P): 2249-6831; ISSN(E): 2249-7943, Vol. 5,
+							Issue 4, pp. 83–94, 2015.</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, S. Lavanya, N. Murali Krishna, Prasad Challa, "<span
+								class="pub-title">Detecting Warm Affected Internal Systems Through Back-door
+								Messages</span>", <span class="pub-venue">International Journal of Scientific &amp;
+								Engineering Research</span>, Vol. 6, Issue 12, pp. 800–804, 2015.</li>
+						<li><b class="me">Bellamkonda Sivaiah</b>, Talasila Vamsidhar, Kotha Hari Chandana, "<span
+								class="pub-title">An Efficient Approach for Fingerprint Recognition by Matching Minutiae
+								Pairings</span>", <span class="pub-venue">International Journal of Advanced Research in
+								Computer Science and Software Engineering</span>, Vol. 5, Issue 2, pp. 536–542, 2015.</li>
+						<li>V. Ramachandran, <b class="me">Sivaiah Bellamkonda</b>, E. Srinivasa Reddy, "<span
+								class="pub-title">Facial Expression Classification System with Emotional Back Propagation
+								Neural Network</span>", <span class="pub-venue">International Journal of Scientific &amp;
+								Engineering Research</span>, Vol. 4, Issue 10, pp. 383–391, 2013.</li>
+					</ol>
+					<div class="no-results">No matching publications.</div>
+				</section>
 			</div>
+
+			<!-- ===================== CONFERENCES / CHAPTERS ===================== -->
 			<div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
-				<h2>Publications - Book chapters</h2>
-				<ol>
-					<li> Parameswaran, R.L., Hazarathayya, <b>Sivaiah Bellakonda</b> (2026). Short-Term Forecasting of the Power Generation of a PV Plant from Relevant Atmospheric Parameters Using ML/DL Methods. In: Haldorai, A., Ramu, A., Murugan, S. (eds) 7th EAI International Conference on Big Data Innovation for Sustainable Cognitive Computing . BDCC 2024. EAI/Springer Innovations in Communication and Computing. Springer, Cham. - <a target='_blank'
-							href='https://doi.org/10.1007/978-3-032-02979-9_4'>link</a></li>
-					<li> Eenadula Bhanuprakash, Guda Phanish, Adapa Srinivasa Rao, Jane George, <b>Sivaiah
-							Bellamkonda</b>, "Multi-Modal Emotion Recognition from Audio and Visual Data", 7th
-						International Conference on
-						Soft Computing and Signal Processing (ICSCSP-2024) at Malla Reddy College of Engineering &
-						Technology, Hyderabad, India during June 21-22, 2024. <b>(Springer)</b></li>
+				<section class="panel">
+					<h2><i class="bi bi-book"></i> Publications – Book Chapters <span class="count"
+							data-count="#chapters > li"></span></h2>
+					<div class="pub-tools">
+						<input type="search" class="form-control pub-search" data-target="#chapters"
+							placeholder="Search book chapters…" aria-label="Search book chapters">
+					</div>
+					<ol class="pubs" id="chapters">
+						<li>R. L. Parameswaran, Hazarathayya, <b class="me">Sivaiah Bellamkonda</b> (2026). "<span
+								class="pub-title">Short-Term Forecasting of the Power Generation of a PV Plant from Relevant
+								Atmospheric Parameters Using ML/DL Methods</span>". In: Haldorai, A., Ramu, A., Murugan, S.
+							(eds) <span class="pub-venue">7th EAI International Conference on Big Data Innovation for
+								Sustainable Cognitive Computing (BDCC 2024)</span>. EAI/Springer Innovations in
+							Communication and Computing. Springer, Cham.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-3-032-02979-9_4"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-3-032-02979-9_4</a></div>
+						</li>
+						<li>Eenadula Bhanuprakash, Guda Phanish, Adapa Srinivasa Rao, Jane George, <b class="me">Sivaiah
+								Bellamkonda</b>, "<span class="pub-title">Multi-Modal Emotion Recognition from Audio and
+								Visual Data</span>", <span class="pub-venue">7th International Conference on Soft Computing
+								and Signal Processing (ICSCSP-2024)</span>, Malla Reddy College of Engineering &amp;
+							Technology, Hyderabad, India, June 21–22, 2024. Lecture Notes in Networks and Systems,
+							pp. 437–450.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-96-0924-6_34"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-96-0924-6_34</a></div>
+						</li>
+						<li>Bharanidharan M, Adapa Srinivasa Rao, Jane George, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">Person Re-Identification and Path Tracking from Surveillance Cameras using
+								Deep Learning</span>", <span class="pub-venue">7th International Conference on Soft
+								Computing and Signal Processing (ICSCSP-2024)</span>, Malla Reddy College of Engineering
+							&amp; Technology, Hyderabad, India, June 21–22, 2024. Lecture Notes in Networks and Systems.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-96-0924-6_35"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-96-0924-6_35</a></div>
+						</li>
+						<li>Sudheesh KS, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Palm Vision: An
+								Improved Disease Detection System in Coconut Plants using Deep Learning Techniques</span>",
+							<span class="pub-venue">7th International Conference on Soft Computing and Signal Processing
+								(ICSCSP-2024)</span>, Malla Reddy College of Engineering &amp; Technology, Hyderabad,
+							India, June 21–22, 2024. Lecture Notes in Networks and Systems.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-96-0924-6_39"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-96-0924-6_39</a></div>
+						</li>
+						<li>Manulal MP, Adapa Srinivasa Rao, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">Presentation attack detection for multispectral face biometric system using
+								federated learning</span>", <span class="pub-venue">International Conference on Innovations
+								and Advances in Cognitive Systems (ICIACS 2024)</span>, Builders Engineering College,
+							Kangayam, Tamil Nadu, India, May 27–28, 2024. Information Systems Engineering and Management.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-3-031-69201-7_22"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-3-031-69201-7_22</a></div>
+						</li>
+						<li>Hareesh PM, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Deep Learning-Based
+								Classification of Lung Cancer Lesions in CT Scans: Comparative Analysis of CNN, VGG-16, and
+								MobileNet Models</span>", <span class="pub-venue">4th International Conference on Image
+								Processing and Capsule Networks (ICIPCN 2023)</span>, Tribhuvan University (Pulchowk
+							Campus), Lalitpur, Nepal, August 10–11, 2023, Bangkok, Thailand. Lecture Notes in Networks and
+							Systems.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-99-7093-3_25"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-99-7093-3_25</a></div>
+						</li>
+						<li>G Rithish Kumar Reddy, K Sai Nruthik Sri Harsha, Vaisakh NP, <b class="me">Sivaiah
+								Bellamkonda</b>, "<span class="pub-title">Enhanced Brain Tumor Classification with Inception
+								V3 and Xception Dual-Channel CNN</span>", <span class="pub-venue">International Conference
+								on Evolutionary Artificial Intelligence (ICEAI 2023)</span>, Taylor's University, Malaysia,
+							September 13–14, 2023. Algorithms for Intelligent Systems.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-99-8438-1_8"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-99-8438-1_8</a></div>
+						</li>
+						<li>Ann Mary Babu, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">A diagnosis model
+								based on federated learning for lung cancer classification</span>", <span
+								class="pub-venue">International Conference on Science, Engineering Management and
+								Information Technology (SEMIT 2023)</span>, Ankara, Turkey, September 14–15, 2023.
+							Communications in Computer and Information Science.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-3-031-72284-4_13"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-3-031-72284-4_13</a></div>
+						</li>
+						<li>Dhanush Binu, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Academic Dishonesty
+								Detection in Exams using Pose Extraction</span>", <span class="pub-venue">7th International
+								Conference on Inventive Systems and Control (ICISC 2023)</span>, Coimbatore, India,
+							January 30–31, 2023. Lecture Notes in Networks and Systems.
+							<div class="pub-meta"><span class="idx springer">Springer</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1007/978-981-99-1624-5_24"><i
+										class="bi bi-box-arrow-up-right"></i>10.1007/978-981-99-1624-5_24</a></div>
+						</li>
+					</ol>
+					<div class="no-results">No matching publications.</div>
+				</section>
 
-					<li>Bharanidharan M, Adapa Srinivasa Rao, Jane George, <b>Sivaiah Bellamkonda</b>, "Person
-						Re-Identification and Path Tracking from Surveillance Cameras using Deep Learning", 7th
-						International Conference on Soft Computing and Signal Processing (ICSCSP-2024) at Malla Reddy
-						College of Engineering & Technology, Hyderabad, India during June 21-22, 2024. <b>(Springer)</b>
-					</li>
-
-					<li>Sudheesh KS, <b>Sivaiah Bellamkonda</b>, "Palm Vision: An Improved Disease Detection System in
-						Coconut Plants using Deep Learning Techniques", 7th International Conference on Soft Computing
-						and Signal Processing (ICSCSP-2024) at Malla Reddy College of Engineering & Technology,
-						Hyderabad, India during June 21-22, 2024. <b>(Springer)</b></li>
-
-					<li>Manulal MP, Adapa Srinivasa Rao, <b>Sivaiah Bellamkonda</b>, "Presentation attack detection for
-						multispectral face biometric system using federated learning", International Conference on
-						Innovations and Advances in Cognitive Systems ICIACS 2024 at Builders Engineering College,
-						Kangayam, Tamil Nadu, India, during 27-28, May 2024<b>(Springer)</b></li>
-
-					<li>Hareesh PM, <b>Sivaiah Bellamkonda</b>, "Deep Learning-Based Classification of Lung Cancer
-						Lesions in CT Scans: Comparative Analysis of CNN, VGG-16, and MobileNet Models, 4th
-						International Conference on Image Processing and Capsule Networks (ICIPCN - 2023), organized by
-						Tribhuvan University (Pulchowk Campus), Lalitpur, Nepal, 10-11, August 2023 Bangkok, Thailand.
-						<b>(Springer)</b>
-					<li>G Rithish Kumar Reddy, K Sai Nruthik Sri Harsha, Vaisakh NP, <b>Sivaiah Bellamkonda</b>,
-						"Enhanced Brain Tumor Classification with Inception V3 and Xception Dual-Channel CNN", at the
-						ICEAI 2023: International Conference on Evolutionary Artificial Intelligence (ICEAI 2023),
-						Taylor's University, Malaysia, 13-14, September 2023.<b>(Springer)</b>
-					<li>Ann Mary Babu, <b>Sivaiah Bellamkonda</b>, "A diagnosis model based on federated learning for
-						lung cancer classification", International Conference on Science, Engineering Management and
-						Information Technology (SEMIT 2023) held on 14-15 September 2023 in Ankara, Turkey.
-						<b>(Springer)</b>
-					<li>Dhanush Binu, <b>Sivaiah Bellamkonda</b>, "Academic Dishonesty Detection in Exams using Pose
-						Extraction", 7th International Conference on Inventive Systems and Control (ICISC 2023), 30-31
-						January 2023, Coimbatore, India. <b>(Springer)</b>
-				</ol>
-
-				<h2>Publications - Conferences</h2>
-				<ol>
-
-					<li> Murali Krishna Nangedda, <b>Sivaiah Bellamkonda</b>, and Sivadi Balakrishna “Plant Leaf Disease Detection and Classification Using Deep Learning Models: A Comprehensive Survey”, IEEE International Conference on Emerging Computing and Intelligent Technologies (ICoECIT2026), G Narayanamma Institute of Technology & Sciences, ISBN: 979-8-3315-8997-4, Hyderabad, Telangana, India, pp. 1-6, January 28-29, 2026. <a href='https://doi.org/10.1109/ICoECIT68303.2026.11497051'>link</a>
-					
-					
-					<li> M. M. P, J. N. J, M. A. V, <b>Sivaiah Bellamkonda</b>, S. A. Joseph and V. V, "Automated Detection and Counting of Election Campaign Posters Via Deep Learning and Candidate Face Recognition," 2026 International Conference on Innovative Trends in Information Technology (ICITIIT), Kottayam, India, 2026, pp. 1-5. - <a target='_blank'
-							href='https://doi.org/10.1109/ICITIIT68860.2026.11499588'>link</a>
-					
-					<li> R. Rani, J. Sahoo and <b>Sivaiah Bellamkonda</b>, "Corn Disease Detection Using Few-Shot Learning
-						Prototypical Network," 2024 IEEE 16th International Conference on Computational Intelligence and
-						Communication Networks (CICN), Indore, India, 2024, pp. 1379-1383 - <a target='_blank'
-							href='https://doi.org/10.1109/CICN63059.2024.10847346'>link</a>
-					<li>Ruchi Rani, Sahoo J, <b>Sivaiah Bellamkonda</b>, "Application of Deep Transfer Learning in
-						Detection of Lung Cancer: A Systematic Survey", in the IEEE sponsored OPJU International
-						Technology Conference on Emerging Technologies for Sustainable Development (OTCON 2.0) conducted
-						by OP Jindal University, Raigarh, Chattisgarh, India, during 8-10 February 2023.
-					<li><b>Sivaiah Bellamkonda</b>, N. P. Gopalan, "Facial Expression Recognition Using Kirsch Edge
-						Detection, LBP and Gabor Wavelets," IEEE International Conference On Intelligent Computing and
-						Control Systems - ICCS 2018, Vaigai College of Engineering, Madurai, India, 14-15 June 2018.
-					</li>
-					<li>N.P. Gopalan, <b>Sivaiah Bellamkonda</b>, Vinnakota Saran Chaitanya, "Facial Expression
-						Recognition Using Geometric Landmark Points and Convolutional Neural Networks", IEEE
-						International Conference on Inventive Research in Computing Applications (ICIRCA 2018),
-						Coimbatore, India, 11-12 July 2018.</li>
-					<li>Jaladi Udaya Santhi, <b>Sivaiah Bellamkonda</b>, Dr.N.Gnaneswara Rao, "Analysis of web server
-						log files using Hadoop MapReduce to preprocess the log files and to explore the session
-						identification and network anomalies", International Conference on Electrical, Electronics,
-						Engineering Trends, Communication, Optimization and Sciences (EEECOS)-2016.</li>
-					<li>Saranu Yeshasri, <b>Sivaiah Bellamkonda</b>, Dr.N. Gnaneswara Rao, "Automated Security Audit of
-						Infrastructure Cloud for AWS", International Conference on Electrical, Electronics, Engineering
-						Trends, Communication, Optimization and Sciences (EEECOS)-2016.</li>
-					<li><b>Sivaiah Bellamkonda</b>, T.S.N.Murthy, T. Vandana Babu, "Boot Multiple Operating Systems
-						using USB Disk", IEEE International Conference on Electronics and Communication Systems
-						(ICECS'14), 2014, 290-294.</li>
-					<li>T.Vandana Babu, T.Satyanarayana Murthy, <b>Sivaiah Bellamkonda</b>, "Detecting Unusual Customer
-						Consumption Profiles in Power Distribution Systems", IEEE International Conference on
-						Computational Intelligence and Computing Research, 2013, 537-541.</li>
-				</ol>
+				<section class="panel">
+					<h2><i class="bi bi-easel"></i> Publications – Conferences <span class="count"
+							data-count="#confs > li"></span></h2>
+					<div class="pub-tools">
+						<input type="search" class="form-control pub-search" data-target="#confs"
+							placeholder="Search conference papers…" aria-label="Search conference papers">
+					</div>
+					<ol class="pubs" id="confs">
+						<li>Murali Krishna Nangedda, <b class="me">Sivaiah Bellamkonda</b>, and Sivadi Balakrishna, "<span
+								class="pub-title">Plant Leaf Disease Detection and Classification Using Deep Learning Models:
+								A Comprehensive Survey</span>", <span class="pub-venue">IEEE International Conference on
+								Emerging Computing and Intelligent Technologies (ICoECIT 2026)</span>, G Narayanamma
+							Institute of Technology &amp; Sciences, Hyderabad, Telangana, India, pp. 1–6, January 28–29,
+							2026. ISBN: 979-8-3315-8997-4.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ICoECIT68303.2026.11497051"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ICoECIT68303.2026.11497051</a></div>
+						</li>
+						<li>M. M. P, J. N. J, M. A. V, <b class="me">Sivaiah Bellamkonda</b>, S. A. Joseph and V. V, "<span
+								class="pub-title">Automated Detection and Counting of Election Campaign Posters Via Deep
+								Learning and Candidate Face Recognition</span>", <span class="pub-venue">2026 International
+								Conference on Innovative Trends in Information Technology (ICITIIT)</span>, Kottayam, India,
+							2026, pp. 1–5.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ICITIIT68860.2026.11499588"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ICITIIT68860.2026.11499588</a></div>
+						</li>
+						<li>R. Rani, J. Sahoo and <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Corn
+								Disease Detection Using Few-Shot Learning Prototypical Network</span>", <span
+								class="pub-venue">2024 IEEE 16th International Conference on Computational Intelligence and
+								Communication Networks (CICN)</span>, Indore, India, 2024, pp. 1379–1383.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/CICN63059.2024.10847346"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/CICN63059.2024.10847346</a></div>
+						</li>
+						<li>Ruchi Rani, J. Sahoo, <b class="me">Sivaiah Bellamkonda</b>, "<span class="pub-title">Application
+								of Deep Transfer Learning in Detection of Lung Cancer: A Systematic Survey</span>", <span
+								class="pub-venue">IEEE OPJU International Technology Conference on Emerging Technologies for
+								Sustainable Development (OTCON 2.0)</span>, OP Jindal University, Raigarh, Chhattisgarh,
+							India, February 8–10, 2023.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/OTCON56053.2023.10113932"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/OTCON56053.2023.10113932</a></div>
+						</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, N. P. Gopalan, "<span class="pub-title">Facial Expression
+								Recognition Using Kirsch Edge Detection, LBP and Gabor Wavelets</span>", <span
+								class="pub-venue">IEEE International Conference on Intelligent Computing and Control Systems
+								(ICCS 2018)</span>, Vaigai College of Engineering, Madurai, India, June 14–15, 2018.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ICCONS.2018.8662971"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ICCONS.2018.8662971</a></div>
+						</li>
+						<li>N. P. Gopalan, <b class="me">Sivaiah Bellamkonda</b>, Vinnakota Saran Chaitanya, "<span
+								class="pub-title">Facial Expression Recognition Using Geometric Landmark Points and
+								Convolutional Neural Networks</span>", <span class="pub-venue">IEEE International Conference
+								on Inventive Research in Computing Applications (ICIRCA 2018)</span>, Coimbatore, India,
+							July 11–12, 2018.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ICIRCA.2018.8597226"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ICIRCA.2018.8597226</a></div>
+						</li>
+						<li>Jaladi Udaya Santhi, <b class="me">Sivaiah Bellamkonda</b>, N. Gnaneswara Rao, "<span
+								class="pub-title">Analysis of web server log files using Hadoop MapReduce to preprocess the
+								log files and to explore the session identification and network anomalies</span>", <span
+								class="pub-venue">International Conference on Electrical, Electronics, Engineering Trends,
+								Communication, Optimization and Sciences (EEECOS)</span>, 2016.</li>
+						<li>Saranu Yeshasri, <b class="me">Sivaiah Bellamkonda</b>, N. Gnaneswara Rao, "<span
+								class="pub-title">Automated Security Audit of Infrastructure Cloud for AWS</span>", <span
+								class="pub-venue">International Conference on Electrical, Electronics, Engineering Trends,
+								Communication, Optimization and Sciences (EEECOS)</span>, 2016.</li>
+						<li><b class="me">Sivaiah Bellamkonda</b>, T. S. N. Murthy, T. Vandana Babu, "<span
+								class="pub-title">Boot Multiple Operating Systems using USB Disk</span>", <span
+								class="pub-venue">IEEE International Conference on Electronics and Communication Systems
+								(ICECS'14)</span>, 2014, pp. 290–294.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ECS.2014.6892602"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ECS.2014.6892602</a></div>
+						</li>
+						<li>T. Vandana Babu, T. Satyanarayana Murthy, <b class="me">Sivaiah Bellamkonda</b>, "<span
+								class="pub-title">Detecting Unusual Customer Consumption Profiles in Power Distribution
+								Systems</span>", <span class="pub-venue">IEEE International Conference on Computational
+								Intelligence and Computing Research (ICCIC)</span>, 2013, pp. 537–541.
+							<div class="pub-meta"><span class="idx ieee">IEEE</span><a class="doi" target="_blank"
+									rel="noopener" href="https://doi.org/10.1109/ICCIC.2013.6724264"><i
+										class="bi bi-box-arrow-up-right"></i>10.1109/ICCIC.2013.6724264</a></div>
+						</li>
+					</ol>
+					<div class="no-results">No matching publications.</div>
+				</section>
 			</div>
+
+			<!-- ===================== ORGANIZER ===================== -->
 			<div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
-				<h2>Organizer/Coordinator - Workshop/Conference/Events</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organizing Institute, Place
-							<th>Period
-							<th>
-						</tr>
-					</thead>
-					<tr>
-						<td>Internal Hackathon as part of Smart India Hackathon - SIH’25
-						<td>Indian Institute of Information Technology Kottayam
-						<td>September 22, 2025
-						<td>1 Day
-					</tr>
-					<tr>
-						<td>One-week FDP cum Workshop on Advanced Computer Vision for Image, Video and Applications
-						<td>Indian Institute of Information Technology Kottayam
-						<td>June 23 - 27, 2025
-						<td>5 Days
-					</tr>
-					<tr>
-						<td>Internal Hackathon as part of Smart India Hackathon - SIH’24
-						<td>Indian Institute of Information Technology Kottayam
-						<td>September 19, 2024
-						<td>1 Day
-					</tr>
-
-					<tr>
-						<td>One-week FDP cum Workshop on Advanced Computer Vision for Image & Video Analysis and
-							Applications
-						<td>Indian Institute of Information Technology Kottayam
-						<td>June 17 - 21, 2024
-						<td>5 Days
-					</tr>
-					<tr>
-						<td>Internal Hackathon as part of Smart India Hackathon - SIH’23
-						<td>Indian Institute of Information Technology Kottayam
-						<td>September 21, 2023
-						<td>1 Day
-					</tr>
-					<tr>
-						<td>AI Driven IT Automation with AIOPS
-						<td>Indian Institute of Information Technology Kottayam
-						<td>July 23-24, 2022
-						<td>2 Days
-					</tr>
-
-					<tr>
-						<td>International Conference on Research in Engineering, Computers &amp; Technology
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.
-						<td>8th - 10th Sept. 2016.
-						<td>3 Days
-					</tr>
-					<tr>
-						<td>Workshop on "Apps Fluxus 2015"
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>27th - 29th March 2015
-						<td>3 Days
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-calendar-event"></i> Organizer / Coordinator – Workshops, Conferences &amp; Events</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Internal Hackathon as part of Smart India Hackathon – SIH’25</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">September 22, 2025</td><td><span class="tag">1 Day</span></td></tr>
+								<tr><td>One-week FDP cum Workshop on Advanced Computer Vision for Image, Video and Applications</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">June 23 – 27, 2025</td><td><span class="tag">5 Days</span></td></tr>
+								<tr><td>Internal Hackathon as part of Smart India Hackathon – SIH’24</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">September 19, 2024</td><td><span class="tag">1 Day</span></td></tr>
+								<tr><td>One-week FDP cum Workshop on Advanced Computer Vision for Image &amp; Video Analysis and Applications</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">June 17 – 21, 2024</td><td><span class="tag">5 Days</span></td></tr>
+								<tr><td>Internal Hackathon as part of Smart India Hackathon – SIH’23</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">September 21, 2023</td><td><span class="tag">1 Day</span></td></tr>
+								<tr><td>AI Driven IT Automation with AIOPS</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">July 23 – 24, 2022</td><td><span class="tag">2 Days</span></td></tr>
+								<tr><td>International Conference on Research in Engineering, Computers &amp; Technology</td>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.</td>
+									<td class="nowrap">Sept. 8 – 10, 2016</td><td><span class="tag">3 Days</span></td></tr>
+								<tr><td>Workshop on "Apps Fluxus 2015"</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">March 27 – 29, 2015</td><td><span class="tag">3 Days</span></td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<!-- ===================== REVIEWER ===================== -->
 			<div class="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
-				<h2>Guest Editor/ Reviewer - Journals/Conferences</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Journal/ Conference Details
-						</tr>
-					</thead>
-					<tr>
-						<td>Session-chair - Conference
-						<td>ICITIIT'26, Indian Institute of Information Technology Kottayam
-					</tr>
-					<tr>
-						<td>Session-chair - Conference
-						<td>ICITIIT'25, Indian Institute of Information Technology Kottayam
-					</tr>
-					<tr>
-						<td>Session-chair - Conference
-						<td>ICITIIT'24, Indian Institute of Information Technology Kottayam
-					</tr>
-					<tr>
-						<td>Session-chair - Conference
-						<td>ICITIIT'23, Indian Institute of Information Technology Kottayam
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>Signal Image and Video Processing, Springer
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>Cognitive Neurodynamics, Springer
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>Multimedia Tools and Applications, Springer
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>Behaviour & Information Technology, Taylor & Francis.
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>SADHANA, Springer Nature.
-					</tr>
-					<tr>
-						<td>Reviewer - Journal
-						<td>Cogent Engineering, Taylor & Francis Group, UK.
-					</tr>
-					<tr>
-						<td>Guest Editor
-						<td> Special issue on "Advances in Cellular Automata Applications with Cryptography", in the
-							journal "American Journal of Neural Networks and Applications"
-					</tr>
-					<tr>
-						<td>Reviewer - Conference
-						<td>7th International Conference on Computer Vision and Image Processing (CVIP 2022) conducted
-							by MNIT Nagpur.
-					</tr>
-					<tr>
-						<td>Reviewer - Conference
-						<td>COMPSAC 2020 IT in Practice (ITiP) Symposium, Milan, Italy.
-					</tr>
-					<tr>
-						<td>Reviewer - Conference
-						<td>TENCON19, Kochi, Kerala, October 17-20, 2019
-					</tr>
-
-				</table>
-
+				<section class="panel">
+					<h2><i class="bi bi-pencil-square"></i> Guest Editor / Reviewer / Session Chair</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Role</th><th>Journal / Conference Details</th></tr>
+							</thead>
+							<tbody>
+								<tr><td class="nowrap"><span class="tag now">Session Chair</span></td><td>ICITIIT'26, Indian Institute of Information Technology Kottayam</td></tr>
+								<tr><td class="nowrap"><span class="tag now">Session Chair</span></td><td>ICITIIT'25, Indian Institute of Information Technology Kottayam</td></tr>
+								<tr><td class="nowrap"><span class="tag now">Session Chair</span></td><td>ICITIIT'24, Indian Institute of Information Technology Kottayam</td></tr>
+								<tr><td class="nowrap"><span class="tag now">Session Chair</span></td><td>ICITIIT'23, Indian Institute of Information Technology Kottayam</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Signal, Image and Video Processing, Springer</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Cognitive Neurodynamics, Springer</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Multimedia Tools and Applications, Springer</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Behaviour &amp; Information Technology, Taylor &amp; Francis</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Sādhanā, Springer Nature</td></tr>
+								<tr><td class="nowrap"><span class="tag ok">Reviewer – Journal</span></td><td>Cogent Engineering, Taylor &amp; Francis Group, UK</td></tr>
+								<tr><td class="nowrap"><span class="tag">Guest Editor</span></td><td>Special issue on "Advances in Cellular Automata Applications with Cryptography", <i>American Journal of Neural Networks and Applications</i></td></tr>
+								<tr><td class="nowrap"><span class="tag">Reviewer – Conference</span></td><td>7th International Conference on Computer Vision and Image Processing (CVIP 2022), MNIT Nagpur</td></tr>
+								<tr><td class="nowrap"><span class="tag">Reviewer – Conference</span></td><td>COMPSAC 2020 IT in Practice (ITiP) Symposium, Milan, Italy</td></tr>
+								<tr><td class="nowrap"><span class="tag">Reviewer – Conference</span></td><td>TENCON 2019, Kochi, Kerala, October 17–20, 2019</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<!-- ===================== TALKS ===================== -->
 			<div class="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
-				<h2>Resource Person - Workshops/FDP</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organizing Institute, Place
-							<th>Period
-							<th>
-						</tr>
-					</thead>
-					<tr>
-						<td>AI to Vision: Basics to Latest Trends on ML and DL to Solve Real-World Problems, 15-Day Certification Program
-						<td>Indian Institute of Information Technology Kottayam
-						<td>May 18 - June 5, 2026
-						<td>15 Days
-					</tr>
-					<tr>
-						<td>Five-Day Online Faculty Development Programme on “Big Data Analytics and Security"
-						<td>SRM University-AP
-						<td>April 6 - 10, 2026
-						<td>5 Days
-					</tr>
-					<tr>
-						<td>One-week FDP cum Workshop on Advanced Computer Vision for Image & Video Analysis and
-							Applications
-						<td>Indian Institute of Information Technology Kottayam
-						<td>June 17 - 21, 2025
-						<td>5 Days
-					</tr>
-					<tr>
-						<td>5 Day FDP cum Workshop on Image Processing Using Python Programming
-						<td>Indian Institute of Information Technology Kottayam
-						<td>June 10 - 14, 2024
-						<td>5 Days
-					</tr>
-					<tr>
-						<td>Training programme as part of outreach activity on Web Designing
-						<td>Indian Institute of Mass Communication, Kottayam
-						<td>April 1, 2024
-						<td>1 Day
-					</tr>
-					<tr>
-						<td>Training programme as part of outreach activity on Web Designing
-						<td>Indian Institute of Mass Communication, Kottayam
-						<td>May 31, 2023
-						<td>1 Day
-					</tr>
-
-					<tr>
-						<td>Indo-Taiwan 2-Day workshop on Intelligent Interet of Things
-						<td>Indian Institute of Information Technology Kottayam
-						<td>27th - 28th October 2022
-						<td>2 Days
-					</tr>
-					<tr>
-						<td>SERB Sponsored Statistical Modelling & Computational Intelligence
-						<td>National Institute of Technology, Tiruchirappalli
-						<td>6th - 12th December 2021
-						<td>7 Days
-					</tr>
-					<tr>
-						<td>FDP on "MATLAB Essentials"
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>9th - 14th May 2016
-						<td> 6 Days
-					</tr>
-					<tr>
-						<td>Workshop on "IBM Worklight"
-						<td>Chirala Engineering College, Chirala, Andhra Pradesh, India.
-						<td>11th - 12th January 2016
-						<td>2 Days
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-mic"></i> Resource Person – Workshops / FDPs</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>AI to Vision: Basics to Latest Trends on ML and DL to Solve Real-World Problems, 15-Day Certification Program</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">May 18 – June 5, 2026</td><td><span class="tag">15 Days</span></td></tr>
+								<tr><td>Five-Day Online Faculty Development Programme on “Big Data Analytics and Security”</td>
+									<td>SRM University-AP</td>
+									<td class="nowrap">April 6 – 10, 2026</td><td><span class="tag">5 Days</span></td></tr>
+								<tr><td>One-week FDP cum Workshop on Advanced Computer Vision for Image &amp; Video Analysis and Applications</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">June 17 – 21, 2025</td><td><span class="tag">5 Days</span></td></tr>
+								<tr><td>5-Day FDP cum Workshop on Image Processing Using Python Programming</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">June 10 – 14, 2024</td><td><span class="tag">5 Days</span></td></tr>
+								<tr><td>Training programme as part of outreach activity on Web Designing</td>
+									<td>Indian Institute of Mass Communication, Kottayam</td>
+									<td class="nowrap">April 1, 2024</td><td><span class="tag">1 Day</span></td></tr>
+								<tr><td>Training programme as part of outreach activity on Web Designing</td>
+									<td>Indian Institute of Mass Communication, Kottayam</td>
+									<td class="nowrap">May 31, 2023</td><td><span class="tag">1 Day</span></td></tr>
+								<tr><td>Indo-Taiwan 2-Day Workshop on Intelligent Internet of Things</td>
+									<td>Indian Institute of Information Technology Kottayam</td>
+									<td class="nowrap">October 27 – 28, 2022</td><td><span class="tag">2 Days</span></td></tr>
+								<tr><td>SERB Sponsored Statistical Modelling &amp; Computational Intelligence</td>
+									<td>National Institute of Technology, Tiruchirappalli</td>
+									<td class="nowrap">December 6 – 12, 2021</td><td><span class="tag">7 Days</span></td></tr>
+								<tr><td>FDP on "MATLAB Essentials"</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">May 9 – 14, 2016</td><td><span class="tag">6 Days</span></td></tr>
+								<tr><td>Workshop on "IBM Worklight"</td>
+									<td>Chirala Engineering College, Chirala, Andhra Pradesh, India.</td>
+									<td class="nowrap">January 11 – 12, 2016</td><td><span class="tag">2 Days</span></td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<!-- ===================== PRESENTATIONS ===================== -->
 			<div class="tab-pane fade" id="tab9" role="tabpanel" aria-labelledby="tab9-tab">
-				<h2>Papers Presented in Conferences</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Paper Title
-							<th> Conference Name, Organizing Institute, Place
-							<th> Period
-						</tr>
-					</thead>
-
-					<td>Palm Vision: An Improved Disease Detection System in Coconut Plants using Deep Learning
-						Techniques
-					<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024) at Malla
-						Reddy College of Engineering & Technology, Hyderabad, India
-					<td>June 21-22, 2024. </td>
-
-					<tr>
-						<td> Multi-Modal Emotion Recognition from Audio and Visual Data
-						<td>7th International Conference on
-							Soft Computing and Signal Processing (ICSCSP-2024) at Malla Reddy College of Engineering &
-							Technology, Hyderabad, India.
-						<td>JUNE 21-22, 2024</td>
-
-					<tr>
-						<td> Person Re-Identification and Path Tracking from Surveillance Cameras using Deep Learning
-						<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024) at Malla
-							Reddy College of Engineering & Technology, Hyderabad, India.
-						<td>JUNE 21-22, 2024</td>
-
-					<tr>
-						<td> Presentation attack detection for multispectral face biometric system using federated
-							learning
-						<td> International Conference on Innovations and Advances in Cognitive Systems ICIACS 2024 at
-							Builders Engineering College, Kangayam, Tamil Nadu, India.
-						<td>27-28, May 2024</td>
-
-					<tr>
-						<td> A diagnosis model based on federated learning for lung cancer classification
-						<td>International Conference on Science, Engineering Management and Information Technology
-							(SEMIT 2023) in Ankara, Turkey
-						<td> 14-15 September 2023.
-					</tr>
-
-					<tr>
-						<td> Enhanced Brain Tumor Classification with Inception V3 and Xception Dual-Channel CNN
-						<td> ICEAI 2023: International Conference on Evolutionary Artificial Intelligence (ICEAI 2023),
-							Taylor's University, Malaysia
-						<td> 13-14, September 2023
-					</tr>
-
-					<tr>
-						<td> Deep Learning-Based Classification of Lung Cancer Lesions in CT Scans: Comparative Analysis
-							of CNN, VGG-16, and MobileNet Models
-						<td> 4th International Conference on Image Processing and Capsule Networks (ICIPCN - 2023),
-							organized by Tribhuvan University (Pulchowk Campus), Lalitpur, Nepal
-						<td> 10-11, August 2023
-					</tr>
-
-					<tr>
-						<td> Application of Deep Transfer Learning in Detection of Lung Cancer: A Systematic Survey
-						<td> Emerging Technologies for Sustainable Development (OTCON 2.0) conducted by OP Jindal
-							University, Raigarh, Chattisgarh, India
-						<td>8th-10th February 2023
-					</tr>
-
-					<tr>
-						<td> Academic dishonesty detection using human pose estimation
-						<td>7th International Conference on Inventive Systems and Control (ICISC 2023), Coimbatore,
-							India
-						<td>30th-31st January 2023
-					</tr>
-
-
-					<tr>
-						<td> A novel approach to FER using PCA, Gabor Wavelets and LBP
-						<td> International Conference on Recent Trends in Automation, Vasireddy Venkatadri Institute of
-							Technology, Guntur, Andhra Pradesh, India.
-						<td> 15th-16th Nov. 2018
-					</tr>
-					<tr>
-						<td> Morphology based tense aspect disambiguation for sentences in Telugu to English translation
-						<td> International Conference on Recent Trends in Automation, Vasireddy Venkatadri Institute of
-							Technology, Guntur, Andhra Pradesh, India.
-						<td> 15th-16th Nov. 2018
-					</tr>
-					<tr>
-						<td> Facial expression recognition using Geometric landmark points and convolutional neural
-							networks
-						<td> International Conference on Inventive Research in Computing Applications, RVS College of
-							Engineering and Technology, Coimbatore, Tamil Nadu, India.
-						<td> 11th-12th July 2018
-					</tr>
-					<tr>
-						<td> Facial expression recognition using Kirsch edge detection, LBP and Gabor Wavelets
-						<td> International Conference on Intelligent Computing and Control Systems, Vaigai College of
-							Engineering, Madurai, Tamil Nadu, India.
-						<td> 14th-15th June 2018
-					</tr>
-					<tr>
-						<td> Boot Multiple Operating Systems using USB Disk
-						<td> International Conference on Electronics and Communication Systems, Karpagam College of
-							Engineering, Coimbatore, Tamil Nadu, India.
-						<td> 14th-15th Feb. 2014
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-display"></i> Papers Presented in Conferences</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Paper Title</th><th>Conference, Organizing Institute, Place</th><th>Period</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Palm Vision: An Improved Disease Detection System in Coconut Plants using Deep Learning Techniques</td>
+									<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024), Malla Reddy College of Engineering &amp; Technology, Hyderabad, India</td>
+									<td class="nowrap">June 21–22, 2024</td></tr>
+								<tr><td>Multi-Modal Emotion Recognition from Audio and Visual Data</td>
+									<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024), Malla Reddy College of Engineering &amp; Technology, Hyderabad, India</td>
+									<td class="nowrap">June 21–22, 2024</td></tr>
+								<tr><td>Person Re-Identification and Path Tracking from Surveillance Cameras using Deep Learning</td>
+									<td>7th International Conference on Soft Computing and Signal Processing (ICSCSP-2024), Malla Reddy College of Engineering &amp; Technology, Hyderabad, India</td>
+									<td class="nowrap">June 21–22, 2024</td></tr>
+								<tr><td>Presentation attack detection for multispectral face biometric system using federated learning</td>
+									<td>International Conference on Innovations and Advances in Cognitive Systems (ICIACS 2024), Builders Engineering College, Kangayam, Tamil Nadu, India</td>
+									<td class="nowrap">May 27–28, 2024</td></tr>
+								<tr><td>A diagnosis model based on federated learning for lung cancer classification</td>
+									<td>International Conference on Science, Engineering Management and Information Technology (SEMIT 2023), Ankara, Turkey</td>
+									<td class="nowrap">Sept. 14–15, 2023</td></tr>
+								<tr><td>Enhanced Brain Tumor Classification with Inception V3 and Xception Dual-Channel CNN</td>
+									<td>International Conference on Evolutionary Artificial Intelligence (ICEAI 2023), Taylor's University, Malaysia</td>
+									<td class="nowrap">Sept. 13–14, 2023</td></tr>
+								<tr><td>Deep Learning-Based Classification of Lung Cancer Lesions in CT Scans: Comparative Analysis of CNN, VGG-16, and MobileNet Models</td>
+									<td>4th International Conference on Image Processing and Capsule Networks (ICIPCN 2023), Tribhuvan University (Pulchowk Campus), Lalitpur, Nepal</td>
+									<td class="nowrap">Aug. 10–11, 2023</td></tr>
+								<tr><td>Application of Deep Transfer Learning in Detection of Lung Cancer: A Systematic Survey</td>
+									<td>Emerging Technologies for Sustainable Development (OTCON 2.0), OP Jindal University, Raigarh, Chhattisgarh, India</td>
+									<td class="nowrap">Feb. 8–10, 2023</td></tr>
+								<tr><td>Academic dishonesty detection using human pose estimation</td>
+									<td>7th International Conference on Inventive Systems and Control (ICISC 2023), Coimbatore, India</td>
+									<td class="nowrap">Jan. 30–31, 2023</td></tr>
+								<tr><td>A novel approach to FER using PCA, Gabor Wavelets and LBP</td>
+									<td>International Conference on Recent Trends in Automation, Vasireddy Venkatadri Institute of Technology, Guntur, Andhra Pradesh, India</td>
+									<td class="nowrap">Nov. 15–16, 2018</td></tr>
+								<tr><td>Morphology based tense aspect disambiguation for sentences in Telugu to English translation</td>
+									<td>International Conference on Recent Trends in Automation, Vasireddy Venkatadri Institute of Technology, Guntur, Andhra Pradesh, India</td>
+									<td class="nowrap">Nov. 15–16, 2018</td></tr>
+								<tr><td>Facial expression recognition using Geometric landmark points and convolutional neural networks</td>
+									<td>International Conference on Inventive Research in Computing Applications, RVS College of Engineering and Technology, Coimbatore, Tamil Nadu, India</td>
+									<td class="nowrap">July 11–12, 2018</td></tr>
+								<tr><td>Facial expression recognition using Kirsch edge detection, LBP and Gabor Wavelets</td>
+									<td>International Conference on Intelligent Computing and Control Systems, Vaigai College of Engineering, Madurai, Tamil Nadu, India</td>
+									<td class="nowrap">June 14–15, 2018</td></tr>
+								<tr><td>Boot Multiple Operating Systems using USB Disk</td>
+									<td>International Conference on Electronics and Communication Systems, Karpagam College of Engineering, Coimbatore, Tamil Nadu, India</td>
+									<td class="nowrap">Feb. 14–15, 2014</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<!-- ===================== AWARDS ===================== -->
 			<div class="tab-pane fade" id="tab10" role="tabpanel" aria-labelledby="tab10-tab">
-				<h2>Awards/Achievements</h2>
-				<h5>National Eligibility Tests conducted by UGC:</h5>
-				<ol>
-					<li>UGC NET Qualified for Lectureship in December 2019 Session with 92.49 %</li>
-					<li>UGC NET Qualified for Lectureship in December 2015 Session with 94.72 %</li>
-					<li>Qualified in AP SET 2012 for Lectureship.</li>
-				</ol>
-				<h5>Professional Certifications:</h5>
-				<ol>
-					<li>Qualified "IBM Certified System Administrator for Lotus Notes and Domino 8", on 14-Feb-2011.
-					</li>
-					<li>Qualified "IBM Certified Associate Developer for RAD for WebSphere v6.0" on 30-Jan-2010.</li>
-					<li>Qualified "IBM Certified Solution Designer for Rational Functional Tester for Java" on
-						15-Jul-2010.</li>
-					<li>Qualified "IBM Certified Specialist for Rational Team Concert v3.0" on 01-Oct-2013.</li>
-				</ol>
-				<h5>Online Courses:</h5>
-				<ol>
-					<li>"Machine Learning" from Coursera in June 2014.</li>
-					<li>"Functional Programming Principles in Scala" from Coursera in July 2014.</li>
-					<li>"Programming for Everybody (Python)" from Coursera in July 2014.</li>
-					<li>"University Teaching" from Coursera in August 2020.</li>
-					<li>"Machine Learning for All" from Coursera in August 2020.</li>
-					<li>"Learning to Teach Online" from Coursera in August 2020.</li>
-					<li>"Machine Learning Algorithms: Supervised Learning Tip to Tail" from Coursera in October 2020.
-					</li>
-					<li>"Facial Expression Recognition with Keras" from Coursera in October 2020.</li>
-					<li>"Emotion AI: Facial Key-points Detection" from Coursera in October 2020.</li>
-				</ol>
-				<h2>Administrative/Committees/Other related Roles:</h2>
-				<ol>
-					<li> <b>Associate FIC - Technical Club</b> at Indian Institute of Information Technology Kottayam.
-					</li>
-					<li> Single point of contact <b>SPoC for Smart India Hackathon - SIH’23 and SIH’24</b> at Indian
-						Institute of Information Technology Kottayam.</li>
-					<li> <b>Assistant Warden</b> for Manimala and Meenachil hostels at Indian Institute of Information
-						Technology Kottayam.</li>
-					<li> <b>Member of Annual Report Committee</b> at Indian Institute of Information Technology
-						Kottayam.</li>
-					<li> <b>BTP Project Coordinator</b> at Indian Institute of Information Technology Kottayam.</li>
-					<li> <b>Member, Hygienic Committee</b> at Indian Institute of Information Technology Kottayam.</li>
-					<li>Centre Coordinator for VSAT Entrance Test at VFSTR University, Guntur.</li>
-					<li>Department Coordinator for Alumni Relations at VFSTR University, Guntur.</li>
-					<li>Lab in-charge for IBM Centre of Excellence at VFSTR University, Guntur.</li>
-					<li>Department Coordinator for Special Certification Programs at VFSTR University, Guntur.</li>
-					<li>In-house Software development in-charge at VFSTR University, Guntur.</li>
-					<li>Department Coordinator for Course e-Content development at VFSTR University, Guntur.</li>
-					<li>University Coordinator for Moodle MOOC online learning system at VFSTR University, Guntur.</li>
-					<li>Software maintenance/ advisory member for University Examinations at VFSTR University, Guntur.
-					</li>
-					<li>Department PG Project coordinator at VFSTR University, Guntur.</li>
-				</ol>
+				<section class="panel">
+					<h2><i class="bi bi-award"></i> Awards &amp; Achievements</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<h5><i class="bi bi-trophy text-warning"></i> National Eligibility Tests (UGC)</h5>
+							<ol class="clean">
+								<li>UGC NET qualified for Lectureship, December 2019 session — <b>92.49%</b></li>
+								<li>UGC NET qualified for Lectureship, December 2015 session — <b>94.72%</b></li>
+								<li>Qualified in AP SET 2012 for Lectureship</li>
+							</ol>
+							<h5><i class="bi bi-patch-check text-primary"></i> Professional Certifications</h5>
+							<ol class="clean">
+								<li>IBM Certified System Administrator for Lotus Notes and Domino 8 <span class="muted">(14-Feb-2011)</span></li>
+								<li>IBM Certified Associate Developer for RAD for WebSphere v6.0 <span class="muted">(30-Jan-2010)</span></li>
+								<li>IBM Certified Solution Designer for Rational Functional Tester for Java <span class="muted">(15-Jul-2010)</span></li>
+								<li>IBM Certified Specialist for Rational Team Concert v3.0 <span class="muted">(01-Oct-2013)</span></li>
+							</ol>
+						</div>
+						<div class="col-md-6">
+							<h5><i class="bi bi-laptop text-success"></i> Online Courses (Coursera)</h5>
+							<ol class="clean">
+								<li>Machine Learning <span class="muted">(June 2014)</span></li>
+								<li>Functional Programming Principles in Scala <span class="muted">(July 2014)</span></li>
+								<li>Programming for Everybody (Python) <span class="muted">(July 2014)</span></li>
+								<li>University Teaching <span class="muted">(August 2020)</span></li>
+								<li>Machine Learning for All <span class="muted">(August 2020)</span></li>
+								<li>Learning to Teach Online <span class="muted">(August 2020)</span></li>
+								<li>Machine Learning Algorithms: Supervised Learning Tip to Tail <span class="muted">(October 2020)</span></li>
+								<li>Facial Expression Recognition with Keras <span class="muted">(October 2020)</span></li>
+								<li>Emotion AI: Facial Key-points Detection <span class="muted">(October 2020)</span></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="panel">
+					<h2><i class="bi bi-diagram-3"></i> Administrative / Committee Roles</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<h5>IIIT Kottayam</h5>
+							<ol class="clean">
+								<li><b>Associate FIC – Technical Club</b></li>
+								<li>Single Point of Contact <b>(SPoC) for Smart India Hackathon – SIH’23 and SIH’24</b></li>
+								<li><b>Assistant Warden</b> for Manimala and Meenachil hostels</li>
+								<li><b>Member, Annual Report Committee</b></li>
+								<li><b>BTP Project Coordinator</b></li>
+								<li><b>Member, Hygienic Committee</b></li>
+							</ol>
+						</div>
+						<div class="col-md-6">
+							<h5>VFSTR University, Guntur</h5>
+							<ol class="clean">
+								<li>Centre Coordinator for VSAT Entrance Test</li>
+								<li>Department Coordinator for Alumni Relations</li>
+								<li>Lab in-charge for IBM Centre of Excellence</li>
+								<li>Department Coordinator for Special Certification Programs</li>
+								<li>In-house Software Development in-charge</li>
+								<li>Department Coordinator for Course e-Content Development</li>
+								<li>University Coordinator for Moodle MOOC online learning system</li>
+								<li>Software maintenance / advisory member for University Examinations</li>
+								<li>Department PG Project Coordinator</li>
+							</ol>
+						</div>
+					</div>
+				</section>
 			</div>
 
+			<!-- ===================== STUDENTS ===================== -->
 			<div class="tab-pane fade" id="tab11" role="tabpanel" aria-labelledby="tab11-tab">
+				<section class="panel">
+					<h2><i class="bi bi-mortarboard"></i> Ph.D. Scholars <span class="count" data-count="#phd tbody tr"></span></h2>
+					<div class="table-wrap">
+						<table class="table table-hover" id="phd">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organization, Place</th><th>Status</th><th>Scholar</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Plant disease detection using Identification Model Improvement and Advancements in Deep Learning</td>
+									<td>IIIT Kottayam, Pala, Kerala (Co-Guide)</td>
+									<td class="nowrap">2023 – 2026 <span class="tag ok">Awarded</span></td>
+									<td class="nowrap">Dr. Ruchi Rani</td></tr>
+								<tr><td>Precision farming using AI and UAVs for disease detection and targeted application of pesticides</td>
+									<td>IIIT Kottayam, Pala, Kerala</td>
+									<td><span class="tag now">Ongoing</span></td>
+									<td class="nowrap">Mr. Murali Krishna Nangedda</td></tr>
+								<tr><td>CapsNet-based Facial Emotion Recognition using Macro and Micro Expressions with Integrated Explainability to Reveal Genuine Emotions</td>
+									<td>IIIT Kottayam, Pala, Kerala</td>
+									<td><span class="tag now">Ongoing</span></td>
+									<td class="nowrap">Ms. Jane George</td></tr>
+								<tr><td>Vision based techniques for enhanced navigation in autonomous vehicles</td>
+									<td>IIIT Kottayam, Pala, Kerala</td>
+									<td><span class="tag now">Ongoing</span></td>
+									<td class="nowrap">Mr. Sreekumar O S</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 
-				<h2>Ph.D. Students</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organization, Place
-							<th>During
-							<th>Student Name
-						</tr>
-					</thead>
-					<tr>
-						<td>Plant disease detection using Identification Model Improvement and Advancements in Deep
-							Learning
-						<td>IIIT Kottayam, Pala, Kerala (Co-Guide)
-						<td> 2023-2026 (Awarded)
-						<td>Dr. Ruchi Rani
-					</tr>
-					<tr>
-						<td> Precision farming using AI and UAVs for disease detection and targeted application of pesticides
-						<td>IIIT Kottayam, Pala, Kerala
-						<td> On going
-						<td>Mr. Murali krishna Nangedda
-					</tr>
-					<tr>
-						<td>CapsNet-based Facial Emotion Recognition using Macro and Micro Expressions with Integrated
-							Explainability to Reveal Genuine Emotions
-						<td>IIIT Kottayam, Pala, Kerala
-						<td> On going
-						<td>Ms. Jane George
-					</tr>
-					
-					<tr>
-						<td>Vision based techniques for enhanced navigation in autonomous vehicles
-						<td>IIIT Kottayam, Pala, Kerala
-						<td> On going
-						<td>Mr. Sreekumar O S
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-person-video3"></i> PG Students <span class="count" data-count="#pg tbody tr"></span></h2>
+					<div class="table-wrap">
+						<table class="table table-hover" id="pg">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Student</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>A Transformer based Mental Wellness Assistant for Social Media to Combat Online Negativity</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug 2025 – May 2026</td><td class="nowrap">Ms. Mythri G</td></tr>
+								<tr><td>Low Resolution Images to High Resolution Images</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug 2024 – May 2025</td><td class="nowrap">Mr. Dheeraj Kumar Reddy</td></tr>
+								<tr><td>Skin Cancer Detection using MetaFormer on 3D-TBP Images</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug 2024 – May 2025</td><td class="nowrap">Mr. Bhava Vyasa Hari</td></tr>
+								<tr><td>Power System Resilience: A Machine Learning Approach</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug 2023 – May 2024</td><td class="nowrap">Mr. Gokul Govind</td></tr>
+								<tr><td>Convolutional Neural Network-Based Realtime Multiple Diseases Identification in Coconut Plants</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug 2023 – May 2024</td><td class="nowrap">Mr. K S Sudheesh</td></tr>
+								<tr><td>Privacy preserving secure Biometric authentication using Blockchain and Federated Learning</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Jan 2023 – Dec 2023</td><td class="nowrap">Mr. Manulal MP</td></tr>
+								<tr><td>Forecasting solar PV generation and irradiance using LSTM</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Jan 2023 – Dec 2023</td><td class="nowrap">Mr. Renjithlal Parameswaran</td></tr>
+								<tr><td>A diagnosis model based on federated learning for Lung Cancer Classification</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">July 2022 – May 2023</td><td class="nowrap">Ms. Ann Mary Babu</td></tr>
+								<tr><td>Investigation of Certain Deep Learning Models for early Lung Cancer classification in Computed Tomography</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">July 2022 – May 2023</td><td class="nowrap">Mr. Hareesh P.M</td></tr>
+								<tr><td>Vision based realtime inventory update in warehouse</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">July 2022 – May 2023</td><td class="nowrap">Mr. Amit Dey</td></tr>
+								<tr><td>Analysis of web server log files using Hadoop MapReduce to preprocess the log files and to explore the session identification and network anomalies</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2015 – May 2016</td><td class="nowrap">Ms. Jaladi Udaya Santhi</td></tr>
+								<tr><td>Automated Security Audit of Infrastructure Cloud for AWS</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2015 – May 2016</td><td class="nowrap">Ms. Saranu Yeshasri</td></tr>
+								<tr><td>An Efficient Approach for Fingerprint Recognition by Matching Minutiae Pairings</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2014 – May 2015</td><td class="nowrap">Ms. Kotha Hari Chandana</td></tr>
+								<tr><td>Simulation of Image Encryption and Decryption using AES and RC4 Algorithms</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2013 – May 2014</td><td class="nowrap">Mr. N Ajay Kumar</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 
+				<section class="panel">
+					<h2><i class="bi bi-people"></i> UG Students <span class="count" data-count="#ug tbody tr"></span></h2>
+					<div class="table-wrap">
+						<table class="table table-hover" id="ug">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Students</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Phonology-Aware Cross-Lingual Adapter Transfer for Low-Resource ASR: Telugu and Santhali</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2025 – April 2026</td>
+									<td class="nowrap">Sabbi Prathima Sindhu Varshini<br>Barnala Aditya Sri Ram<br>Guvvala Karthik</td></tr>
+								<tr><td>Real-Time Driver Monitoring and Road Hazard Detection for Indian Roads</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2025 – April 2026</td>
+									<td class="nowrap">MD Sameer Pasha<br>Ojasvi Gupta<br>Akash Nair<br>Ragipani Keshavi</td></tr>
+								<tr><td>Decentralized Machine Learning With Secure Multi-party Aggregation for Privacy-preserving Healthcare Systems</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2024 – April 2025</td>
+									<td class="nowrap">Kishan G<br>Hemasaketh<br>Harsh Anand<br>Ujwal Kumar</td></tr>
+								<tr><td>Comparative Analysis on Automated Breast Cancer Detection Using ML/DL Models and Explainable AI</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2024 – April 2025</td>
+									<td class="nowrap">Harigovind P<br>Pushpender Singh<br>Shinde Aditya Mahesh<br>Pal Abhishek Rajendrabhai</td></tr>
+								<tr><td>Multi-Modal Emotion Recognition from Audio and Visual Data</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2023 – May 2024</td>
+									<td class="nowrap">Eenadula Bhanuprakash<br>Maridu Laasya Sri<br>Guda Phanish<br>Gotam Gorabh</td></tr>
+								<tr><td>Person Re-Identification and Path Tracking from Surveillance Cameras using Deep Learning</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2023 – May 2024</td>
+									<td class="nowrap">Kappaganthu Brahmarambhika Jyothy<br>Chappidi Veera Nagendra<br>Baranidaran M<br>Vansh Jagyasi</td></tr>
+								<tr><td>A study on efficiency of transfer learning from joint training of InceptionV3 and Xception models on brain tumor classification</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2022 – May 2023</td>
+									<td class="nowrap">Vaisakh NP<br>G Rithish Kumar Reddy<br>K Sai Nruthik<br>Sri Harsha</td></tr>
+								<tr><td>Academic Dishonesty Detection in Exams using Deep Learning Techniques</td>
+									<td>Indian Institute of Information Technology, Kottayam</td>
+									<td class="nowrap">Aug. 2021 – May 2022</td>
+									<td class="nowrap">Dhanush Binu</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 
-
-				<h2>PG Students</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organization, Place
-							<th>During
-							<th>Student Name
-						</tr>
-					</thead>
-					<tr>
-						<td> A Transformer based Mental Wellness Assistant for Social Media To combat Online Negativity
-						<td>Indian Institute of Information
-							Technology, Kottayam
-						<td>Aug 2025 - May 2026
-						<td>Ms. Mythri G
-					</tr>
-					<tr>
-						<td> Low Resolution Images to High Resolution Images
-						<td>Indian Institute of Information
-							Technology, Kottayam
-						<td>Aug 2024 - May 2025
-						<td>Mr. Dheeraj Kumar Reddy
-					</tr>
-
-					<tr>
-						<td> Skin Cancer Detection using MetaFormer on 3D-TBP Images
-						<td>Indian Institute of Information
-							Technology, Kottayam
-						<td>Aug 2024 - May 2025
-						<td>Mr. Bhava Vyasa Hari
-					</tr>
-
-					<tr>
-						<td> Power System Resilience A Machine Learning Approach
-						<td>Indian Institute of Information
-							Technology, Kottayam
-						<td>Aug 2023 - May 2024
-						<td>Mr. Gokul Govind
-					</tr>
-					<tr>
-						<td> Convolutional Neural Network-Based Realtime Multiple Diseases Identification in Coconut
-							Plants
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug 2023 - May 2024
-						<td>Mr. K S Sudheesh
-					</tr>
-
-					<tr>
-						<td> Privacy preserving secure Biometric authentication using Blockchain and federated Learning
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Jan 2023 - Dec 2023
-						<td>Mr. Manulal MP
-					</tr>
-					<tr>
-						<td> Forecasting solar PV generation and iradience using LSTM
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Jan 2023 - Dec 2023
-						<td>Mr. Renjithlal Parameswaran
-					</tr>
-
-					<tr>
-						<td> A diagnosys model based on federated learning for Lung Cancer Classification
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>July 2022 - May 2023
-						<td>Ms. Ann Mary Babu
-					</tr>
-					<tr>
-						<td> Investigation of Certain Deep Learning Models for early Lung Cancer classification in
-							Computed Tomography
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>July 2022 - May 2023
-						<td>Mr. Hareesh P.M
-					</tr>
-					<tr>
-						<td> Vision based realtime inventory update in warehouse
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>July 2022 - May 2023
-						<td>Mr. Amit Dey
-					</tr>
-
-
-					<tr>
-						<td> Analysis of web server log files using Hadoop MapReduce to preprocess the log files and to
-							explore the session identification and network anomalies
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2015 - May 2016
-						<td>Ms. Jaladi Udaya Santhi
-					</tr>
-					<tr>
-						<td> Automated Security Audit of Infrastructure Cloud for AWS
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2015 - May 2016
-						<td>Ms. Saranu Yeshasri
-					</tr>
-					<tr>
-						<td> Simulation of Image Encryption and Decryption using AES and RC4 Algorithms
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2013 - May 2014
-						<td>Mr. N Ajay Kumar
-					</tr>
-					<tr>
-						<td> An Efficient Approach for Fingerprint Recognition by Matching Minutiae Pairings
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2014 - May 2015
-						<td>Ms. Kotha Hari Chandana
-					</tr>
-				</table>
-
-				<h2>UG Students</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organization, Place
-							<th>During
-							<th>Student Name
-						</tr>
-					</thead>
-					<tr>
-						<td>PHONOLOGY-AWARE CROSS-LINGUAL ADAPTER TRANSFER FOR LOW-RESOURCE ASR: TELUGU AND SANTHALI
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2025 - April 2026
-						<td>Sabbi Prathima Sindhu Varshini<br>Barnala Aditya Sri Ram<br>Guvvala Karthik
-					</tr>
-					<tr>
-						<td>Real-Time Driver Monitoring and Road Hazard Detection for Indian Roads
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2025 - April 2026
-						<td>MD Sameer Pasha<br>Ojasvi Gupta<br>Akash Nair<br>Ragipani Keshavi
-					</tr>
-					<tr>
-						<td>Decentralized Machine Learning With Secure Multi-party Aggregation for Privacy-preserving
-							Healthcare Systems
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2024 - April 2025
-						<td>Kishan G<br>Hemasaketh<br>Harsh Anand<br>Ujwal Kumar
-					</tr>
-					<tr>
-						<td>Comparative Analysis on Automated Breast Cancer Detection Using ML/DL Models and Explainable
-							AI
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2024 - April 2025
-						<td>Harigovind P<br>Pushpender Singh<br>Shinde Aditya Mahesh<br>Pal Abhishek Rajendrabhai
-					</tr>
-
-					<tr>
-						<td>Multi-Modal Emotion Recognition from Audio and Visual Data
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2023 - May 2024
-						<td>Eenadula Bhanuprakash<br>Maridu Laasya Sri<br>Guda Phanish<br>Gotam Gorabh
-					</tr>
-
-					<tr>
-						<td>Person Re-Identification and Path Tracking from Surveillance Cameras using Deep Learning
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2023 - May 2024
-						<td>Kappaganthu Brahmarambhika Jyothy<br>Chappidi Veera Nagendra<br>Baranidaran M<br>Vansh
-							Jagyasi
-					</tr>
-
-					<tr>
-						<td> A study on efficiency of transfer learning from joint training of inceptionv3 and xception
-							models on brain tumor classification
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2022 - May 2023
-						<td>Vaisakh NP<br>G Rithish Kumar Reddy<br>K Sai Nruthik<br>Sri Harsha
-					</tr>
-
-					<tr>
-						<td> Academic Dishonesty Detection in Exams using Deep Learning Techniques
-						<td>Indian Institute of Information Technology, Kottayam
-						<td>Aug. 2021 - May 2022
-						<td>Dhanush Binu
-					</tr>
-
-				</table>
-
-				<h2>Live Projects</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organization, Place
-							<th>During
-							<th>Student Name
-						</tr>
-					</thead>
-					<tr>
-						<td> University Admission Process Automation
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>Desu Sathvik <br> Dhulipalla Satya Sai Akshay <br> Motamarri Chetan
-					</tr>
-					<tr>
-						<td> Student Information System
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>Narisetti Karishma <br> Paladugu Saranya <br> Yarlagadda Chanti
-					</tr>
-					<tr>
-						<td> Student Feedback System
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>Yarra Ramdasu <br> Achala Ramu <br> A. Venkata Naga Kailash
-					</tr>
-					<tr>
-						<td> Academic and Emotional Progression of Student
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>Choppa Abhiram Kumar <br> Dasari Venkata Avinash <br> Gajula Leela Naga Devi
-					</tr>
-					<tr>
-						<td> Faculty Assessment System
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>G. Siva Rama Krishna <br> G. Dhanunjaya Lakshmi <br> Jangala Sunny
-					</tr>
-					<tr>
-						<td> University Examinations Automation
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>Nov. 2011 - May 2012
-						<td>R. Sri Anjaneya Sai Swaroop <br> Vadlamudi Sai Saketh Ram <br> Dantu Pavan Kumar
-					</tr>
-				</table>
+				<section class="panel">
+					<h2><i class="bi bi-gear"></i> Live Projects</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organization, Place</th><th>During</th><th>Students</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>University Admission Process Automation</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">Desu Sathvik<br>Dhulipalla Satya Sai Akshay<br>Motamarri Chetan</td></tr>
+								<tr><td>Student Information System</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">Narisetti Karishma<br>Paladugu Saranya<br>Yarlagadda Chanti</td></tr>
+								<tr><td>Student Feedback System</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">Yarra Ramdasu<br>Achala Ramu<br>A. Venkata Naga Kailash</td></tr>
+								<tr><td>Academic and Emotional Progression of Student</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">Choppa Abhiram Kumar<br>Dasari Venkata Avinash<br>Gajula Leela Naga Devi</td></tr>
+								<tr><td>Faculty Assessment System</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">G. Siva Rama Krishna<br>G. Dhanunjaya Lakshmi<br>Jangala Sunny</td></tr>
+								<tr><td>University Examinations Automation</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td>
+									<td class="nowrap">Nov. 2011 – May 2012</td>
+									<td class="nowrap">R. Sri Anjaneya Sai Swaroop<br>Vadlamudi Sai Saketh Ram<br>Dantu Pavan Kumar</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<!-- ============ Hidden panes (no tab; shown only when printing as CV) ============ -->
 			<div class="tab-pane fade" id="fdp" role="tabpanel" aria-labelledby="fdp-tab">
-				<h2>Workshops/FDPs Attended</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<th>Title
-							<th>Organizing Institute, Place
-							<th>Period
-						</tr>
-					</thead>
-
-					<tr>
-						<td>AICTE Training And Learning (ATAL) Academy Online FDP on "Data Sciences"
-						<td>AICTE & GITAM University, Vishakhapatnam
-						<td>4th – 8th Jan. 2021
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>AICTE Training And Learning (ATAL) Academy Online FDP on "Cloud Technology"
-						<td>AICTE & GITAM
-						<td> University, Vishakhapatnam
-						<td>16th – 20th Nov. 2020
-							5 Days
-					</tr>
-
-					<tr>
-						<td>One week FDP on “Deep Learning and
-							its Applications”
-						<td>Malla Reddy Engineering College, Maisammaguda, Secunderabad-
-						<td>7th – 12th Dec. 2020
-						<td>6 Days
-					</tr>
-
-					<tr>
-						<td>MHRD Sponsored Workshop on “Cloud & Edge Computing for Big Data Analytics”
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.
-						<td>16th – 20th Dec. 2019
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>One week FDP on “Advanced Deep Learning Techniques”
-						<td>Electronics & ICT Academy, National Institute of Technology, Warangal, Telangana, India.
-						<td>13th – 18th May 2019
-						<td>6 Days
-					</tr>
-
-					<tr>
-						<td>Five Days FDP on “Deep Learning with TensorFlow & R Programming”
-						<td>Kalasalingam Academy of Research & Education, Krishankoil, Tamil Nadu, India
-						<td>11th – 15th Dec. 2018
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>FDP on “Artificial Intelligence using Deep Learning & Machine Learning”
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.
-						<td>26th – 30th Nov. 2018
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>Five Days Short term course on “Software Engineering”
-						<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.
-						<td>27th – 1st Dec. 2017
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>One Week International Workshop on “Machine Learning”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>7th – 12th July 2014
-						<td>6 Days
-					</tr>
-
-					<tr>
-						<td>Five Days workshop on “Data Mining”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>7th – 11th July 2012
-						<td>5 Days
-					</tr>
-
-					<tr>
-						<td>FDP on “Linux Internals”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>27th – 29th April 2014
-						<td>3 Days
-					</tr>
-
-					<tr>
-						<td>Three Days Workshop on “Cloud Computing & Applications”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>7th – 9th Mar. 2014
-						<td>3 Days
-					</tr>
-
-					<tr>
-						<td>Workshop on “Python Programming”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>26th-27th Feb. 2016
-						<td>2 Days
-					</tr>
-
-					<tr>
-						<td>Workshop on “Mobile Application Development”
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>22nd-23rd Mar. 2014
-						<td>2 Days
-					</tr>
-
-					<tr>
-						<td>Two Days Workshop on “Cluster Computing with Linux”
-						<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.
-						<td>11th-12th Aug. 2008
-						<td>2 Days
-					</tr>
-
-					<tr>
-						<td>Two Day National Workshop on “J2EE & Web Technologies”
-						<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.
-						<td>8th-9th Sept. 2007
-						<td>2 Days
-					</tr>
-
-					<tr>
-						<td>Faculty Development & Training Program on Spoken Tutorial based Software Training
-						<td>VFSTR University, Guntur, Andhra Pradesh, India.
-						<td>5th Dec. 2013
-						<td>1 Day
-					</tr>
-				</table>
+				<section class="panel">
+					<h2>Workshops / FDPs Attended</h2>
+					<div class="table-wrap">
+						<table class="table table-hover">
+							<thead class="table-header">
+								<tr><th>Title</th><th>Organizing Institute, Place</th><th>Period</th><th>Duration</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>AICTE Training And Learning (ATAL) Academy Online FDP on "Data Sciences"</td>
+									<td>AICTE &amp; GITAM University, Visakhapatnam</td><td class="nowrap">4th – 8th Jan. 2021</td><td>5 Days</td></tr>
+								<tr><td>AICTE Training And Learning (ATAL) Academy Online FDP on "Cloud Technology"</td>
+									<td>AICTE &amp; GITAM University, Visakhapatnam</td><td class="nowrap">16th – 20th Nov. 2020</td><td>5 Days</td></tr>
+								<tr><td>One week FDP on “Deep Learning and its Applications”</td>
+									<td>Malla Reddy Engineering College, Maisammaguda, Secunderabad</td><td class="nowrap">7th – 12th Dec. 2020</td><td>6 Days</td></tr>
+								<tr><td>MHRD Sponsored Workshop on “Cloud &amp; Edge Computing for Big Data Analytics”</td>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.</td><td class="nowrap">16th – 20th Dec. 2019</td><td>5 Days</td></tr>
+								<tr><td>One week FDP on “Advanced Deep Learning Techniques”</td>
+									<td>Electronics &amp; ICT Academy, National Institute of Technology, Warangal, Telangana, India.</td><td class="nowrap">13th – 18th May 2019</td><td>6 Days</td></tr>
+								<tr><td>Five Days FDP on “Deep Learning with TensorFlow &amp; R Programming”</td>
+									<td>Kalasalingam Academy of Research &amp; Education, Krishnankoil, Tamil Nadu, India</td><td class="nowrap">11th – 15th Dec. 2018</td><td>5 Days</td></tr>
+								<tr><td>FDP on “Artificial Intelligence using Deep Learning &amp; Machine Learning”</td>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.</td><td class="nowrap">26th – 30th Nov. 2018</td><td>5 Days</td></tr>
+								<tr><td>Five Days Short term course on “Software Engineering”</td>
+									<td>National Institute of Technology, Tiruchirappalli, Tamil Nadu, India.</td><td class="nowrap">27th Nov. – 1st Dec. 2017</td><td>5 Days</td></tr>
+								<tr><td>One Week International Workshop on “Machine Learning”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">7th – 12th July 2014</td><td>6 Days</td></tr>
+								<tr><td>Five Days workshop on “Data Mining”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">7th – 11th July 2012</td><td>5 Days</td></tr>
+								<tr><td>FDP on “Linux Internals”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">27th – 29th April 2014</td><td>3 Days</td></tr>
+								<tr><td>Three Days Workshop on “Cloud Computing &amp; Applications”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">7th – 9th Mar. 2014</td><td>3 Days</td></tr>
+								<tr><td>Workshop on “Python Programming”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">26th – 27th Feb. 2016</td><td>2 Days</td></tr>
+								<tr><td>Workshop on “Mobile Application Development”</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">22nd – 23rd Mar. 2014</td><td>2 Days</td></tr>
+								<tr><td>Two Days Workshop on “Cluster Computing with Linux”</td>
+									<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.</td><td class="nowrap">11th – 12th Aug. 2008</td><td>2 Days</td></tr>
+								<tr><td>Two Day National Workshop on “J2EE &amp; Web Technologies”</td>
+									<td>Vignan’s Engineering College, Vadlamudi, Guntur, Andhra Pradesh, India.</td><td class="nowrap">8th – 9th Sept. 2007</td><td>2 Days</td></tr>
+								<tr><td>Faculty Development &amp; Training Program on Spoken Tutorial based Software Training</td>
+									<td>VFSTR University, Guntur, Andhra Pradesh, India.</td><td class="nowrap">5th Dec. 2013</td><td>1 Day</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
 			<div class="tab-pane fade" id="teach" role="tabpanel" aria-labelledby="teach-tab">
-				<h2>Subjects Taught</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<thead class="table-header">
-						<tr>
-							<td><b>Core
-							<td><b>Programming
-							<td><b>Research
-						</tr>
-					</thead>
-					<tr>
-
-						<td valign='top' style='padding-top: 0'>Operating Systems<br>
-							Database Systems<br>
-							Computer Networks<br>
-							Software Engineering<br>
-							Design & Analysis of Algorithms
-
-						<td valign='top' style='padding-top: 0'>Java Programming<br>
-							Web Technologies<br>
-							Python Programming<br>
-							Unix & Shell Programming<br>
-							C & C++ Machine Learning
-
-						<td valign='top' style='padding-top: 0'>Digital Image Processing<br>
-							Artificial Neural Networks<br>
-							Data Mining<br>
-							Information Retrieval Systems
-					</tr>
-				</table>
+				<section class="panel">
+					<h2>Subjects Taught</h2>
+					<div class="table-wrap">
+						<table class="table">
+							<thead class="table-header">
+								<tr><th>Core</th><th>Programming</th><th>Research</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Operating Systems<br>Database Systems<br>Computer Networks<br>Software Engineering<br>Design &amp; Analysis of Algorithms</td>
+									<td>Java Programming<br>Web Technologies<br>Python Programming<br>Unix &amp; Shell Programming<br>C &amp; C++<br>Machine Learning</td>
+									<td>Digital Image Processing<br>Artificial Neural Networks<br>Data Mining<br>Information Retrieval Systems</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
 			<div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
-				<h2>Research Interests</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<tr>
-						<td>
-							<ul>
-								<li>Computer Vision
-						<td>
-							<li>Machine Learning
-						<td>
-							<li>Data Mining
-						<td>
-							<li>Internet of Things
-						<td>
-							<li>Big Data Analytics
-								</ul>
-					</tr>
-				</table>
+				<section class="panel">
+					<h2>Research Interests</h2>
+					<p>Computer Vision · Machine Learning · Data Mining · Internet of Things · Big Data Analytics</p>
+				</section>
 			</div>
-			<div class="tab-pane fade" id="references" role="tabpanel" aria-labelledby="references-tab">
-				<h2>Professional References</h2>
-				<table class="table table-bordered table-striped table-hover">
-					<tr>
-						<th>Dr. N. P. Gopalan
-						<th>Dr. C. Mala
-						<th>Dr. R. Mohan
-					</tr>
-					<tr>
-						<td valign='top' style='padding-top: 0'><b>Professor(HAG)(Retd.)</b>& <br>
-							Research Supervisor <br>
-							Department of Computer Applications, National Institute of Technology, Tiruchirappalli.<br>
-							Tamilnadu – 620015.<br>
-							Email:
-							npgopalan@nitt.edu,
-							npgopalan@yahoo.com <br>
-							Phone:
-							+91 9443416970
 
-						<td valign='top' style='padding-top: 0'><b>Professor</b>& <br>
-							Co-Supervisor <br>
-							Department of Computer Science & Engineering, National Institute of Technology,
-							Tiruchirappalli.<br>
-							Tamilnadu – 620015.<br>
-							Email:
-							mala@nitt.edu,
-							cmala123@gmail.com <br>
-							Phone:
-							+91 9443559523
-						<td valign='top' style='padding-top: 0'><b>Assistant Professor</b><br>
-							Department of Computer Science & Engineering, National Institute of Technology,
-							Tiruchirappalli.<br>
-							Tamilnadu – 620015.<br>
-							Email:
-							rmohan@nitt.edu,
-							rmohan.nitt@gmail.com <br>
-							Phone:
-							+91 9442421326
-					</tr>
-				</table>
-			</div>
 			<div class="tab-pane fade" id="references" role="tabpanel" aria-labelledby="references-tab">
-				<table class="table table-bordered table-striped table-hover">
-					<tr>
-						<th>Personal Information
-						<th>Address for Communication
-						<th>Permanant Address
-					</tr>
-					<tr>
-						<td>Name: Sivaiah Bellamkonda<br>
-							Gender: Male<br>
-							D.O.B: 27-05-1986<br>
-							Religion: Hindu<br>
-							Nationality: Indian<br>
-							Languages Known:<br> Telugu: Fluent<br>
-							English: Fluent<br>
-							Hindi: Medium<br>
-							Father’s Name: Sankara Rao<br>
-							Mother’s Name: Chilakamma<br>
-							Marital Status: Married<br>
-						<td>Dr. Sivaiah Bellamkonda,<br>
-							Room No AA – 104,<br>
-							Assistant Professor,<br>
-							Computer Science & Engineering,<br>
-							Valavoor P.O., Pala,<br> Kottayam-686635, Kerala, India.<br>
-							Land Line: +91-0482-2202170<br>
-							Mobile Number: +91 8142274581<br>
-							Email sivaiah.bk@gmail.com, <br>
-							sivaiah78@gmail.com
-
-						<td>D. No. 11-1,<br>
-							Sangam Jagarlamudi Post,<br>
-							Tenali Mandal, <br>
-							Guntur - 522213,<br>
-							Andhra Pradesh, India.
-					</tr>
-				</table>
+				<section class="panel">
+					<h2>Professional References</h2>
+					<div class="table-wrap">
+						<table class="table">
+							<thead class="table-header">
+								<tr><th>Dr. N. P. Gopalan</th><th>Dr. C. Mala</th><th>Dr. R. Mohan</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b>Professor (HAG) (Retd.)</b> &amp;<br>Research Supervisor<br>Department of Computer
+										Applications, National Institute of Technology, Tiruchirappalli.<br>Tamilnadu –
+										620015.<br>Email: npgopalan@nitt.edu, npgopalan@yahoo.com<br>Phone: +91 9443416970</td>
+									<td><b>Professor</b> &amp;<br>Co-Supervisor<br>Department of Computer Science &amp;
+										Engineering, National Institute of Technology, Tiruchirappalli.<br>Tamilnadu –
+										620015.<br>Email: mala@nitt.edu, cmala123@gmail.com<br>Phone: +91 9443559523</td>
+									<td><b>Assistant Professor</b><br>Department of Computer Science &amp; Engineering,
+										National Institute of Technology, Tiruchirappalli.<br>Tamilnadu – 620015.<br>Email:
+										rmohan@nitt.edu, rmohan.nitt@gmail.com<br>Phone: +91 9442421326</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</div>
+
+			<div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+				<section class="panel">
+					<div class="table-wrap">
+						<table class="table">
+							<thead class="table-header">
+								<tr><th>Personal Information</th><th>Address for Communication</th><th>Permanent Address</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Name: Sivaiah Bellamkonda<br>Gender: Male<br>D.O.B: 27-05-1986<br>Religion:
+										Hindu<br>Nationality: Indian<br>Languages Known:<br>Telugu: Fluent<br>English:
+										Fluent<br>Hindi: Medium<br>Father’s Name: Sankara Rao<br>Mother’s Name:
+										Chilakamma<br>Marital Status: Married</td>
+									<td>Dr. Sivaiah Bellamkonda,<br>Room No AA – 104,<br>Assistant Professor,<br>Computer
+										Science &amp; Engineering,<br>Valavoor P.O., Pala,<br>Kottayam-686635, Kerala,
+										India.<br>Land Line: +91-0482-2202170<br>Mobile Number: +91 8142274581<br>Email:
+										sivaiah.bk@gmail.com,<br>sivaiah78@gmail.com</td>
+									<td>D. No. 11-1,<br>Sangam Jagarlamudi Post,<br>Tenali Mandal,<br>Guntur -
+										522213,<br>Andhra Pradesh, India.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+
 			<div class="tab-pane fade" id="decl" role="tabpanel" aria-labelledby="decl-tab">
-				<h2>Declaration</h2>
-				<p align='justify'>I hereby declare that all statements made in the application are true, complete and
-					correct to the best of my knowledge and belief. In the event of any information being found false or
-					incorrect at any point of time, my appointment may be cancelled without any notice.</p>
-				<p align='left'>Place: IIIT Kottayam<br>Date: <span id="todaysDate"></span></p>
-				<p align='right' class="signature">Dr. Sivaiah Bellamkonda</p>
+				<section class="panel">
+					<h2>Declaration</h2>
+					<p align="justify">I hereby declare that all statements made in the application are true, complete and
+						correct to the best of my knowledge and belief. In the event of any information being found false
+						or incorrect at any point of time, my appointment may be cancelled without any notice.</p>
+					<p align="left">Place: IIIT Kottayam<br>Date: <span id="todaysDate"></span></p>
+					<p align="right" class="signature">Dr. Sivaiah Bellamkonda</p>
+				</section>
 			</div>
 		</div>
-		<hr id="visitor" />
 
-
-		<!-- BEGIN: Powered by Supercounters.com -->
-		<h2 id="visitor">Visitor #
-			<script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script>
-			<script type="text/javascript">sc_hit(1693645, Math.floor(Math.random() * 100) + 1, 5);</script>
-
-			<!-- END: Powered by Supercounters.com -->
+		<!-- ===================== VISITOR COUNTER ===================== -->
+		<section class="panel" id="visitor">
 			<!-- BEGIN: Powered by Supercounters.com -->
-			<script type="text/javascript" src="//widget.supercounters.com/ssl/map.js"></script>
-			<script
-				type="text/javascript">var sc_map_var = sc_map_var || []; sc_map(1693647, "112288", "ff0000", 56)</script>
-		</h2>
-		<!-- END: Powered by Supercounters.com -->
+			<h2>Visitor #
+				<script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script>
+				<script type="text/javascript">sc_hit(1693645, Math.floor(Math.random() * 100) + 1, 5);</script>
+				<!-- END: Powered by Supercounters.com -->
+				<!-- BEGIN: Powered by Supercounters.com -->
+				<script type="text/javascript" src="//widget.supercounters.com/ssl/map.js"></script>
+				<script
+					type="text/javascript">var sc_map_var = sc_map_var || []; sc_map(1693647, "112288", "ff0000", 56)</script>
+			</h2>
+			<!-- END: Powered by Supercounters.com -->
+		</section>
 
+		<footer>© <span id="year"></span> Dr. Sivaiah Bellamkonda · IIIT Kottayam</footer>
 	</div>
 
 	<!-- Bootstrap JS and dependencies -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script>
-		function getTodayDate() {
+		(function () {
+			function pad(n) { return String(n).padStart(2, '0'); }
 			var today = new Date();
-			var year = today.getFullYear();
-			var month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-			var day = String(today.getDate()).padStart(2, '0');
-			return day + '-' + month + '-' + year;
-		}
-		// Function to show all tab panes when printing
-		function showTabPanesForPrint() {
-			var tabPanes = document.querySelectorAll('.tab-pane');
-			tabPanes.forEach(function (pane) {
-				pane.classList.add('show', 'active');
-			});
-		}
+			document.getElementById('todaysDate').textContent = pad(today.getDate()) + '-' + pad(today.getMonth() + 1) + '-' + today.getFullYear();
+			document.getElementById('year').textContent = today.getFullYear();
 
-		// Wait for document to be fully loaded
-		document.addEventListener('DOMContentLoaded', function () {
-			// Add event listener for before print event
-			window.addEventListener('beforeprint', function () {
-				showTabPanesForPrint();
+			// Counts from the actual lists, so they stay correct as entries are added
+			function count(sel) { return document.querySelectorAll(sel).length; }
+			document.getElementById('st-journals').textContent = count('#journals > li');
+			document.getElementById('st-chapters').textContent = count('#chapters > li');
+			document.getElementById('st-confs').textContent = count('#confs > li');
+			document.getElementById('st-patents').textContent = count('#patents .patent');
+			document.getElementById('st-phd').textContent = count('#phd tbody tr');
+			document.querySelectorAll('[data-count]').forEach(function (el) {
+				el.textContent = count(el.getAttribute('data-count'));
 			});
-		});
-		document.getElementById('todaysDate').textContent = getTodayDate();
+
+			// Teaching experience since June 2007 (excluding the 2008–2010 M.Tech gap ≈ 2 yrs)
+			var years = (today - new Date(2007, 5, 1)) / (365.25 * 864e5) - 2;
+			document.getElementById('st-exp').textContent = Math.floor(years) + '+';
+
+			// Live duration for the current position
+			document.querySelectorAll('[data-since]').forEach(function (el) {
+				var p = el.getAttribute('data-since').split('-');
+				var months = (today.getFullYear() - +p[0]) * 12 + (today.getMonth() + 1 - +p[1]);
+				var y = Math.floor(months / 12), m = months % 12;
+				el.textContent = y + ' Yrs' + (m ? ' ' + m + ' Mon.' : '');
+			});
+
+			// Publication search
+			document.querySelectorAll('.pub-search').forEach(function (input) {
+				var list = document.querySelector(input.getAttribute('data-target'));
+				var empty = list.nextElementSibling;
+				input.addEventListener('input', function () {
+					var q = input.value.trim().toLowerCase(), shown = 0;
+					list.querySelectorAll(':scope > li').forEach(function (li) {
+						var hit = !q || li.textContent.toLowerCase().indexOf(q) !== -1;
+						li.style.display = hit ? '' : 'none';
+						if (hit) shown++;
+					});
+					empty.style.display = shown ? 'none' : 'block';
+				});
+			});
+
+			// Deep links: open the tab named in the URL hash (e.g. #tab4) and keep hash in sync
+			$(function () {
+				if (location.hash && $('#myTab a[href="' + location.hash + '"]').length) {
+					$('#myTab a[href="' + location.hash + '"]').tab('show');
+				}
+				$('#myTab a').on('shown.bs.tab', function (e) {
+					history.replaceState(null, '', e.target.getAttribute('href'));
+					e.target.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+				});
+			});
+
+			// Printing: show every pane so the page prints as a full CV
+			window.addEventListener('beforeprint', function () {
+				document.querySelectorAll('.tab-pane').forEach(function (pane) { pane.classList.add('show', 'active'); });
+			});
+			window.addEventListener('afterprint', function () {
+				document.querySelectorAll('.tab-pane').forEach(function (pane) {
+					if (!document.querySelector('#myTab a.active[href="#' + pane.id + '"]')) pane.classList.remove('show', 'active');
+				});
+			});
+		})();
 	</script>
 </body>
 
